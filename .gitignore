@@ -1,0 +1,4 @@
+/runtime/**
+!/runtime/bundle/vundle
+!/runtime/tags/.dummy
+!/runtime/tags/easytagsdb/.dummy
