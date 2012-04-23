@@ -13,3 +13,8 @@ let g:tagbar_width=31
 " powerline statusbar
 let laststatus=2
 let g:Powerline_symbols='unicode'
+
+
+" mappings
+nnoremap <silent> <Leader>tb :TagbarToggle<CR>
+nnoremap <silent> <Leader>gu :GundoToggle<CR>

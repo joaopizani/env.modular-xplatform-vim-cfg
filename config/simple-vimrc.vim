@@ -81,6 +81,12 @@ inoremap <silent> <F10> <ESC>:make!<CR>i
 " Making it so ; works like : for commands. Saves typing and eliminates :W style typos
 nnoremap ; :
 
+" Remapping the leader key
+let mapleader = ","
+
+" Some nice general-purpose shortcuts using the leader
+nnoremap <silent> <Leader>nh :nohlsearch<CR>
+
 " Easier moving in windows
 noremap <C-j> <C-W>j
 noremap <C-k> <C-W>k
@@ -94,7 +100,6 @@ nnoremap <A-Left> <C-w><
 nnoremap <A-Right> <C-w>>
 
 
-
 " Ctrl-Space autocomplete
 if has("gui_running")
     inoremap <C-Space> <C-x><C-o>
@@ -103,6 +108,7 @@ else
         inoremap <Nul> <C-x><C-o>
     endif
 endif
+
 
 
 

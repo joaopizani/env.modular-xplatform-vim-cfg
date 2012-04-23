@@ -16,6 +16,9 @@ filetype off
     Bundle 'sjl/gundo.vim'
     Bundle 'ZoomWin'
 
+    " hahahaha :)
+    Bundle 'vim-scripts/matrix.vim--Yang'
+
     " plugins for programming
     Bundle 'majutsushi/tagbar'
     Bundle 'xolox/vim-easytags'
@@ -23,6 +26,8 @@ filetype off
     Bundle 'OmniCppComplete'
     Bundle 'a.vim'
     Bundle 'msanders/snipmate.vim'
+    Bundle 'tpope/vim-ragtag'
+    Bundle 'tpope/vim-fugitive'
 filetype plugin indent on
 
 
