@@ -14,6 +14,10 @@ let g:tagbar_width=31
 let laststatus=2
 let g:Powerline_symbols='unicode'
 
+" snipMate
+let g:snips_author ='João Paulo Pizani Flor'
+let g:snippets_dir = expand('$VIMROOT/runtime/bundle/snipmate.vim/snippets') . ',' . expand('$VIMROOT/custom-snippets')
+
 
 " mappings
 nnoremap <silent> <Leader>tb :TagbarToggle<CR>
