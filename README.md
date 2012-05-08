@@ -1,20 +1,22 @@
 A self-contained, cross-platform and nicely organized VIM setup :)
 ------------------------------------------------------------------
 
-TODO README.
+During the course of several months, I have been using the mighty VIM editor for work, leisure and everything
+in between (mostly stuff related to programming). I collected a lot of tips and tricks, customized my setup
+and used a lot of plugins which I find generally very useful for all programmers out there, so I tried my best
+to organize my setup and make it the most self-contained and easily-reproducible as possible...
 
+Also, I do my work with Linux and Windows, and I struggled to make my beloved VIM setup
+work on all these platforms and provide an essentially unified experience. After much googling and some
+head-banging I could achieve portability, and this VIM setup should work in your machine by just following the
+installation instructions :)
 
-Quick install: git clone the repo into a directory of your liking and create a link from your HOME directory named "_vimrc" pointing to the "_vimrc" file inside the repo. The little "drawing" bellow illustrated the link:
+Installation instructions for Windows are provided in win/README.md. The instructions to install this on Linux
+are here, just because they are so simple®.
 
-$HOME/_vimrc  --->  <where-you-cloned-the-repo>/_vimrc
-
-Note - that's what $HOME (usually) means:
-
-Linux: $HOME = /home/<your-username>
-Windows: $HOME = C:\Documents and Settings\<your-username>
-MacOS X: $HOME = /Users/<your-username>
-
-
-After creating the link, open vim for the first time and type:  ":BundleInstall!". After the process completes, you have everything in order and should be happy!
-
-VOILÀ!
+1. Clone this repo to a directory of your preference, let's call this PARENT\_DIR from now on.
+2. Create a link called "\_vimrc" in your $HOME pointing to the cloned repo:
+   "ln -s \<PARENT_DIR\>/modular-xplatform-vim-cfg/config/vimrc.vim ~/\_vimrc"
+3. VOILÀ! Now if you want to install the set of plugins (recommended step)
+4. Enter vim and type ":BundleInstall"
+5. DONE. COMPLETELY DONE.
