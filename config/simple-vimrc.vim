@@ -46,6 +46,7 @@ if has("gui_running")
 endif
 
 set t_Co=256
+colorscheme torte " comes prebundled, is a nice default when ext. plugins are off.
 set textwidth=110
 
 set shortmess+=filmnrxoOtT      " abbrev. of messages (avoids 'hit enter')
