@@ -11,7 +11,7 @@ set tags+=$VIMTAGS/quazip
 
 " easytags setup
 if has("win32")
-    let g:easytags_cmd = resolve(fnamemodify(resolve(expand("<sfile>")), ":p:h:8") . '\..\win\ctags58\ctags.exe')
+    let g:easytags_cmd = resolve(fnamemodify(expand("$VIMROOT"), ":8") . '\win\ctags58\ctags.exe')
 endif
 let g:easytags_by_filetype = expand("$VIMTAGS") . '/easytagsdb'
 let g:easytags_include_members = 1
