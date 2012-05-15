@@ -9,8 +9,8 @@ let g:easytags_by_filetype = expand("$VIMTAGS") . '/easytagsdb'
 let g:easytags_include_members = 1
 let g:easytags_resolve_links = 1
 let g:easytags_auto_highlight = 1
-let g:easytags_updatetime_min = 3000
-set updatetime=3000
+let g:easytags_updatetime_min = 2000
+set updatetime=2000
 
 " keybinding to force tag update (just in case you dont want to wait some seconds)
 nnoremap <silent> <Leader>t :UpdateTags<CR>
