@@ -30,6 +30,7 @@ if(filereadable(expand("$VIMROOT") . "/runtime/bundle/vundle/README.md"))
     Bundle 'OmniCppComplete'
     Bundle 'a.vim'
     Bundle 'msanders/snipmate.vim'
+    Bundle 'Raimondi/delimitMate'
     Bundle 'tpope/vim-ragtag'
     Bundle 'tpope/vim-fugitive'
 

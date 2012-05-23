@@ -100,6 +100,7 @@ let mapleader = ","
 " Some nice general-purpose shortcuts using the leader
 nnoremap <silent> <Leader>nh :nohlsearch<CR>
 
+
 " Ctrl-Space autocomplete
 if has("gui_running")
     inoremap <C-Space> <C-x><C-o>

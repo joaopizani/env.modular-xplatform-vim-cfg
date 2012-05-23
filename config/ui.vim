@@ -19,6 +19,14 @@ let g:Powerline_symbols='unicode'
 let g:snips_author ='João Paulo Pizani Flor'
 let g:snippets_dir = expand('$VIMROOT/runtime/bundle/snipmate.vim/snippets') . ',' . expand('$VIMROOT/custom-snippets')
 
+" delimitMate
+let b:delimitMate_expand_cr = 1
+let b:delimitMate_expand_space = 1
+let b:delimitMate_balance_matchpairs = 1
+imap <expr> <CR> pumvisible() ?
+                 \"\<c-y>" :
+                 \ "<Plug>delimitMateCR"
+
 
 " mappings
 nnoremap <silent> <Leader>tb :TagbarToggle<CR>
