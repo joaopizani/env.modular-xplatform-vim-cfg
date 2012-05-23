@@ -14,6 +14,7 @@ set updatetime=2000
 
 " keybinding to force tag update (just in case you dont want to wait some seconds)
 nnoremap <silent> <Leader>t :UpdateTags<CR>
+nnoremap <silent> <Leader>tc :UpdateTags!<CR>
 
 " easytagsdb
 set tags=$VIMTAGS/easytagsdb/*
