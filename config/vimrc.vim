@@ -19,6 +19,7 @@ if(filereadable(expand("$VIMROOT") . "/runtime/bundle/vundle/README.md"))
     Bundle 'jnurmine/Zenburn'
     Bundle 'sjl/gundo.vim'
     Bundle 'ZoomWin'
+    Bundle 'plasticboy/vim-markdown'
 
     " hahahaha :)
     Bundle 'vim-scripts/matrix.vim--Yang'
