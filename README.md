@@ -16,18 +16,27 @@ are here, just because they are so simple®.
 
 Basic installation steps
 ------------------------
- 1. Clone this repo to a directory of your preference, let's call this PARENT\_DIR from now on.
+ * Clone this repo to a directory of your preference, let's call this $PARENT\_DIR from now on.
+ * The second step is operating system specific. After you're done with the second step, the only
+   remaining config - which is OPTIONAL - is to install the recommended plugins.
 
- 2. Create a link called "\_vimrc" in your $HOME pointing to the cloned repo:
-   "ln -s \<PARENT_DIR\>/modular-xplatform-vim-cfg/config/vimrc.vim ~/\_vimrc"
+### Second step on Linux ###
 
- 3. VOILÀ! Now if you want to install the set of plugins (recommended step), go on...
+ * Create a link called "\_vimrc" in your $HOME pointing to the cloned repo:
+   "ln -s $PARENT\_DIR/modular-xplatform-vim-cfg/config/vimrc.vim $HOME/\_vimrc".
 
-Installing the set of recommended, blessed plugins, all at once
----------------------------------------------------------------
- 1. cd into \<PARENT_DIR\>/modular-xplatform-vim-cfg and type "git submodule init && git submodule update".
-    You have just added "vundle" (a very nice® Vim plugin manager) to your config, congrats!
+### Second step on Windows ###
+
+ * Go into "$PARENT\_DIR/modular-xplatform-vim-cfg/win" and execute (double-click) the file
+   named "install-vimrc-link.bat".
+
+
+Installing the set of recommended plugins, all at once - OPTIONAL
+-----------------------------------------------------------------
+ 1. cd into $PARENT\_DIR/modular-xplatform-vim-cfg and type "git submodule init && git submodule update".
+    You have just added [Vundle](https://github.com/gmarik/vundle) (a very nice® Vim plugin manager)
+    to your config, congrats!
 
  2. Enter vim and type ":BundleInstall"
 
- 3. DONE. COMPLETELY DONE.
+ 3. DONE. COMPLETELY DONE. Some basic usage instructions will be here soon... :)
