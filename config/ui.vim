@@ -1,5 +1,9 @@
 " color scheme
-colorscheme zenburn
+if has('win32') && !has('gui_running')
+    colorscheme elflord
+else
+    colorscheme zenburn
+endif
 
 " NERDTree
 let NERDTreeChDirMode = 2
