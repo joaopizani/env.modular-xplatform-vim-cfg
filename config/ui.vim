@@ -1,6 +1,6 @@
 " color scheme
 if has('win32') && !has('gui_running')
-    colorscheme elflord
+    colorscheme torte
 else
     colorscheme zenburn
 endif
