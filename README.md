@@ -21,7 +21,7 @@ Basic installation steps
 ### Second step on Linux ###
 
  * Create a link called "\_vimrc" in your $HOME pointing to the cloned repo:
-   `ln -s $PARENT_DIR/modular-xplatform-vim-cfg/config/_vimrc $HOME/_vimrc`.
+   `ln -s $PARENT_DIR/modular-xplatform-vim-cfg/_vimrc $HOME/_vimrc`.
 
 ### Second step on Windows ###
 
