@@ -14,18 +14,9 @@ let g:easytags_auto_highlight = 0
 let g:easytags_updatetime_min = 3000
 set updatetime=3000
 
+
 " keybinding to force tag update (just in case you dont want to wait some seconds)
-nnoremap <silent> <Leader>t :UpdateTags<CR>
-nnoremap <silent> <Leader>tc :UpdateTags!<CR>
-
-
-" OmniCppCompletion
-let OmniCpp_MayCompleteDot = 1 " autocomplete with .
-let OmniCpp_MayCompleteArrow = 1 " autocomplete with ->
-let OmniCpp_NamespaceSearch = 2 " search namespaces in this and included files
-let OmniCpp_ShowPrototypeInAbbr = 0
-autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
-autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+nnoremap <silent> <F12> :UpdateTags!<CR>
 
 
 " Haskell stuff

@@ -20,9 +20,8 @@ autocmd FileType make setlocal noexpandtab " no fake tabs in makefiles
 " navigation
 set wildmenu
 set wildmode=list:longest,full  " command <Tab> completion, list matches, then longest common, then all.
-
-set scrolljump=5                " lines to scroll when cursor leaves screen
-set scrolloff=2                 " minimum lines to keep above and below cursor
+set scrolljump=3                " lines to scroll when cursor leaves screen
+set scrolloff=1                 " minimum lines to keep above and below cursor
 set foldmethod=syntax
 set list
 set listchars=tab:,.,trail:.,extends:#,nbsp:. " Highlight problematic whitespace
@@ -70,14 +69,11 @@ inoremap <silent> <F6> <ESC>:cwindow<CR>i
 nnoremap <silent> <F7> :cn<CR>
 inoremap <silent> <F7> <ESC>:cn<CR>i
 
-nnoremap <silent> <F8> :AS<CR>
-inoremap <silent> <F8> <ESC>:AS<CR>i
+nnoremap <silent> <F8> :wa<CR>
+inoremap <silent> <F8> <ESC>:wa<CR>i
 
-nnoremap <silent> <F9> :wa<CR>
-inoremap <silent> <F9> <ESC>:wa<CR>i
-
-nnoremap <silent> <F12> :make!<CR>
-inoremap <silent> <F12> <ESC>:make!<CR>i
+nnoremap <silent> <F9> :make!<CR>
+inoremap <silent> <F9> <ESC>:make!<CR>i
 
 " Easier moving in windows
 noremap <C-j> <C-W>j
@@ -98,6 +94,7 @@ nnoremap ; :
 let mapleader = ","
 
 " Some nice general-purpose shortcuts using the leader
+nnoremap <silent> <Leader>hl :set hlsearch<CR>
 nnoremap <silent> <Leader>nh :nohlsearch<CR>
 
 
@@ -109,7 +106,6 @@ else
         inoremap <Nul> <C-x><C-o>
     endif
 endif
-
 
 
 
@@ -129,17 +125,16 @@ call SetMakeprg()
 
 
 
-
 " backups, persistent undo and view files
-set backup                     " backups are nice ...
+set backup                     " backups are nice...
 if has('persistent_undo')
-    set undofile               "so is persistent undo ...
-    set undolevels=200         "maximum number of changes that can be undone
-    set undoreload=5000        "maximum number lines to save for undo on a buffer reload
+    set undofile               " so is persistent undo...
+    set undolevels=100         " maximum number of changes that can be undone
+    set undoreload=3000        " maximum number lines to save for undo on a buffer reload
 endif
 " Could use * rather than *.*, but I prefer to leave .files unsaved
-au BufWinLeave *.* silent! mkview  "make vim save view (state) (folds, cursor, etc)
-au BufWinEnter *.* silent! loadview "make vim load view (state) (folds, cursor, etc)
+au BufWinLeave *.* silent! mkview    " make vim save view (state) (folds, cursor, etc)
+au BufWinEnter *.* silent! loadview  " make vim load view (state) (folds, cursor, etc)
 
 function! InitializeDirectories()
     let separator = "."
@@ -149,7 +144,6 @@ function! InitializeDirectories()
                 \ 'backup': 'backupdir',
                 \ 'views': 'viewdir',
                 \ 'swap': 'directory' }
-
     if has('persistent_undo')
         let dir_list['undo'] = 'undodir'
     endif
@@ -176,14 +170,14 @@ call InitializeDirectories()
 
 " Remaining configuration
 if has("vms")
-    set nobackup		" do not keep a backup file, use versions instead
+    set nobackup   " do not keep a backup file, use versions instead
 else
-    set backup		" keep a backup file
+    set backup     " keep a backup file
 endif
-set history=50		" keep 50 lines of command line history
-set ruler		" show the cursor position all the time
-set showcmd		" display incomplete commands
-set incsearch		" do incremental searching
+set history=50     " keep 50 lines of command line history
+set ruler          " show the cursor position all the time
+set showcmd        " display incomplete commands
+set incsearch      " do incremental searching
 
 " Don't use Ex mode, use Q for formatting
 map Q gq
@@ -194,14 +188,13 @@ inoremap <C-U> <C-G>u<C-U>
 
 
 if has('mouse')
-  set mouse=a  " the mouse works just fine, thus enable it.
+  set mouse=a    " the mouse works just fine, thus enable it.
 endif
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
 if &t_Co > 2 || has("gui_running")
     syntax on
-    set hlsearch
 endif
 
 
@@ -235,6 +228,6 @@ endif " has("autocmd")
 " Only define it when not defined already.
 if !exists(":DiffOrig")
   command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
-		  \ | wincmd p | diffthis
+          \ | wincmd p | diffthis
 endif
 
