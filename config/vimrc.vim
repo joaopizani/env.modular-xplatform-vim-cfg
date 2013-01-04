@@ -18,6 +18,7 @@ if(filereadable(expand("$VIMROOT") . "/runtime/bundle/vundle/README.md"))
     Bundle 'sjl/gundo.vim'
     Bundle 'ZoomWin'
     Bundle 'plasticboy/vim-markdown'
+    Bundle 'kien/ctrlp.vim'
 
     " LaTeX
     Bundle "LaTeX-Box-Team/LaTeX-Box"

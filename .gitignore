@@ -1,3 +1,4 @@
 /runtime/**
 !/runtime/bundle/vundle
 !/runtime/tags/.dummy
+!/runtime/ctrlp/cache/.dummy
