@@ -11,7 +11,7 @@ let g:easytags_file = expand("$VIMTAGS") . '/global-tags'
 let g:easytags_include_members = 1
 let g:easytags_resolve_links = 1
 let g:easytags_auto_highlight = 0
-let g:easytags_updatetime_min = 3000
+let g:easytags_updatetime_min = 2000
 set updatetime=3000
 
 

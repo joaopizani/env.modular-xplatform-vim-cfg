@@ -15,7 +15,7 @@ let NERDTreeBookmarksFile = expand("$VIMROOT") . '/runtime/NERDTreeBookmarks'
 
 
 " tagbar
-let g:tagbar_width=31
+let g:tagbar_width=30
 
 
 " powerline statusbar

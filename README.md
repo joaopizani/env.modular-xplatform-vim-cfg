@@ -7,7 +7,8 @@ to organize my setup and make it the most self-contained and easily-reproducible
 
 Also, I do my work with Linux and Windows - and I struggled to make my beloved VIM setup work on both platforms
 providing an essentially unified experience. After much googling and some head-banging I could achieve
-portability, and this VIM setup should work in your machine by just following the installation instructions :)
+portability, and this VIM setup should work in your machine by just following the simple installation
+instructions :)
 
 
 Basic installation steps
@@ -41,23 +42,25 @@ Basic installation steps
 Some basic usage instructions
 -----------------------------
 
-### F-n Keymappings ###
+### Frequently used keymappings ###
 The file `modular-xplatform-vim-cfg/config/simple-vimrc.vim` contains, among other niceties, some
 convenient keymappings for frequent tasks when programming using Vim (at least I find them convenient).
 You can of course edit the file to your liking, but the default mappings are:
 
  * **F5:** Opens/closes the NERDTree filesystem navigation sidebar.
- * **F6:** Opens the *Quickfix* window whenever there are errors. If the window is already open and
-   has no errors, closes it (:cwindow).
+ * **F6:** Toggles the *Quickfix* window, i.e, opens it if it's closed and closes it if already open.
  * **F7:** Goes to the next *Quickfix* error (:cn).
- * **F8:** When editing a source C/C++ file (.c, .cpp, etc.), opens the corresponding header in a split
-   window. When editing a header, opens the corresponding source file.
- * **F9:** Saves changes to all open buffers (:wa).
- * **F12:** Builds the "project" (issues the "make!" command), **without** jumping to the first error.
+ * **F8:** Saves changes to all open buffers (:wa).
+ * **F9:** Builds the "project" (issues the "make!" command), **without** jumping to the first error.
 
 **Important:** All abovementioned mappings also work in insert mode.
 
-### Moving between split windows and resizing them ###
+ * **,pp:** Toggles PASTE mode. PASTE mode is useful for when you want to paste formatted text into vim (for
+   example, from the web), and don't want vim to mess with it by trying to indent or format it further.
+ * **,hl:** Toggles search highlighting. After doing a search, it can be useful to have all the results
+   highlighted, but if you want to toggle this setting, use this short mapping :)
+
+### Moving between split windows, resizing and maximizing/restoring them ###
 When using Vim for programming, you often end up using a lot of open buffers, shown in split windows spread
 across your screen. Thus, we added easy mappings to facilitate moving between and resizing split windows:
 
@@ -71,6 +74,8 @@ across your screen. Thus, we added easy mappings to facilitate moving between an
    **non-intuitive**, however: When you are in the topmost window and press Alt+Up, the window will go
    **down** (increase height), and if you are in the rightmost window and press Alt+Right, the window will
    go **left** (increase width).
+ * **\<Ctrl\>w+o:** By pressing this combination, you will maximize the current split to occuppy the whole
+   screen. By pressing the same combination again, the previous split configuration is completely restored.
 
 ### Miscellaneous nice stuff going on under the covers ###
 Some nice settings and plugins are in place which make (at least I think) any programmer's life easier while
@@ -97,7 +102,7 @@ niceties follows:
    described in [this blog post](http://joaopizani.hopto.org/en/2012/05/vim-parallel-make).
 
  * **Automatic, EASY tags:** By using the [easytags](https://github.com/xolox/vim-easytags), tags are
-   generated, regenerated whenever necessary and managed automatically and in a central (by filetype)
+   generated, regenerated whenever necessary and managed automatically and in a central
    location. Our setup includes settings which fine-tune easytags for an even smoother experience. These
    customizations of the plugin are located in `modular-xplatform-vim-cfg/config/tags.vim`.
 
@@ -109,4 +114,5 @@ niceties follows:
    IDEs, you will feel at home with [Tagbar](https://github.com/majutsushi/tagbar). You can show a sidebar
    with an outline of your file (functions, classes, etc.) by typing ",tb". Clicking (or pressing Enter)
    over a tag will take you to that part of the code).
+
 

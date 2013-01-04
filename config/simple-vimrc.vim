@@ -56,6 +56,24 @@ set hidden                      " allow buffer switching without saving
 set cursorline                  " highlight current line
 
 
+" command to toggle quickfix window (home-made solution, simple and short)
+let g:quickfix_is_open = 0
+
+function! s:QuickfixToggle()
+    if g:quickfix_is_open
+        cclose
+        let g:quickfix_is_open = 0
+        execute g:quickfix_return_to_window . "wincmd w"
+    else
+        let g:quickfix_return_to_window = winnr()
+        copen
+        let g:quickfix_is_open = 1
+    endif
+endfunction
+
+command ToggleQuickfix :call <SID>QuickfixToggle()
+
+
 
 " mappings
 " F-keys
@@ -63,8 +81,8 @@ nnoremap <silent> <F5> :NERDTreeToggle<CR>
 inoremap <silent> <F5> <ESC>:NERDTreeToggle<CR>i
 
 let g:shell_mappings_enabled = 0
-nnoremap <silent> <F6> :cwindow<CR>
-inoremap <silent> <F6> <ESC>:cwindow<CR>i
+nnoremap <silent> <F6> :ToggleQuickfix<CR>
+inoremap <silent> <F6> <ESC>:ToggleQuickfix<CR>i
 
 nnoremap <silent> <F7> :cn<CR>
 inoremap <silent> <F7> <ESC>:cn<CR>i
@@ -94,8 +112,14 @@ nnoremap ; :
 let mapleader = ","
 
 " Some nice general-purpose shortcuts using the leader
-nnoremap <silent> <Leader>hl :set hlsearch<CR>
-nnoremap <silent> <Leader>nh :nohlsearch<CR>
+" toggle search highlight
+nnoremap <silent> <Leader>hl :set hlsearch!<CR>
+
+" toggle paste mode (useful for keeping spacing and indent)
+nnoremap <silent> <Leader>pp :set paste!<CR>
+
+" toggle line numbers
+nnoremap <silent> <Leader>nn :set number!<CR>
 
 
 " Ctrl-Space autocomplete
