@@ -19,7 +19,10 @@ if(filereadable(expand("$VIMROOT") . "/runtime/bundle/vundle/README.md"))
     Bundle 'ZoomWin'
     Bundle 'plasticboy/vim-markdown'
 
-    " plugins for programming
+    " LaTeX
+    Bundle "LaTeX-Box-Team/LaTeX-Box"
+
+    " plugins for programming (language-independent)
     Bundle 'tpope/vim-fugitive'
     Bundle 'majutsushi/tagbar'
     Bundle 'xolox/vim-easytags'
