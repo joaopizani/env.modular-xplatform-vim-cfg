@@ -60,6 +60,8 @@ You can of course edit the file to your liking, but the default mappings are:
  * **,hl:** Toggles search highlighting. After doing a search, it can be useful to have all the results
    highlighted, but if you want to toggle this setting, use this short mapping :)
 
+ * **Ctrl+p:** Opens a window for easy most-recently-used and intelligent file and buffer search
+
 ### Moving between split windows, resizing and maximizing/restoring them ###
 When using Vim for programming, you often end up using a lot of open buffers, shown in split windows spread
 across your screen. Thus, we added easy mappings to facilitate moving between and resizing split windows:

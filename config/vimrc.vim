@@ -18,18 +18,20 @@ if(filereadable(expand("$VIMROOT") . "/runtime/bundle/vundle/README.md"))
     Bundle 'sjl/gundo.vim'
     Bundle 'ZoomWin'
     Bundle 'plasticboy/vim-markdown'
+    Bundle 'tpope/vim-fugitive'
     Bundle 'kien/ctrlp.vim'
 
     " LaTeX
     Bundle "LaTeX-Box-Team/LaTeX-Box"
 
     " plugins for programming (language-independent)
-    Bundle 'tpope/vim-fugitive'
     Bundle 'majutsushi/tagbar'
-    Bundle 'xolox/vim-easytags'
     Bundle 'xolox/vim-shell'
+    Bundle 'xolox/vim-easytags'
     Bundle 'msanders/snipmate.vim'
     Bundle 'tpope/vim-ragtag'
+    Bundle 'scrooloose/nerdcommenter'
+    Bundle 'skwp/vim-easymotion'
 
     filetype plugin indent on
 
