@@ -35,6 +35,9 @@ if(filereadable(expand("$VIMROOT") . "/runtime/bundle/vundle/README.md"))
     " plugins for Haskell programming
     Bundle 'Shougo/vimproc'
     Bundle 'eagletmt/ghcmod-vim'
+    Bundle 'Twinside/vim-haskellFold'
+    Bundle 'Twinside/vim-haskellConceal'
+    Bundle 'feuerbach/vim-hs-module-name'
 
     filetype plugin indent on
 

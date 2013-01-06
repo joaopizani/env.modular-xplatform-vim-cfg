@@ -41,3 +41,10 @@ nnoremap <silent> <Leader>hc :GhcModCheck<CR>
 nnoremap <silent> <Leader>hl :GhcModLint<CR>
 nnoremap <silent> <Leader>hm :GhcModExpand<CR>
 
+" mapping for launching the stylish-haskell beautifier
+nnoremap <silent> <Leader>hB :%!stylish-haskell<CR>
+
+" mapping for inserting the current module name
+let g:hs_module_no_mappings = 1
+nnoremap <silent> <Leader>hM :InsertHaskellModuleName<CR>
+
