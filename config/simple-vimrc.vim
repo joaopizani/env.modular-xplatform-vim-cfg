@@ -114,7 +114,7 @@ let mapleader = ","
 
 " Some nice general-purpose shortcuts using the leader
 " toggle search highlight
-nnoremap <silent> <Leader>hl :set hlsearch!<CR>
+nnoremap <silent> <Leader>sh :set hlsearch!<CR>
 
 " toggle paste mode (useful for keeping spacing and indent)
 nnoremap <silent> <Leader>pp :set paste!<CR>

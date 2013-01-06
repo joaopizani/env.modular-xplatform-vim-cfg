@@ -26,12 +26,15 @@ if(filereadable(expand("$VIMROOT") . "/runtime/bundle/vundle/README.md"))
 
     " plugins for programming (language-independent)
     Bundle 'majutsushi/tagbar'
-    Bundle 'xolox/vim-shell'
     Bundle 'xolox/vim-easytags'
     Bundle 'msanders/snipmate.vim'
     Bundle 'tpope/vim-ragtag'
     Bundle 'scrooloose/nerdcommenter'
     Bundle 'skwp/vim-easymotion'
+
+    " plugins for Haskell programming
+    Bundle 'Shougo/vimproc'
+    Bundle 'eagletmt/ghcmod-vim'
 
     filetype plugin indent on
 
@@ -39,6 +42,7 @@ if(filereadable(expand("$VIMROOT") . "/runtime/bundle/vundle/README.md"))
     " Include configurations organized in subject-segregated modules
     source $VIMROOT/config/ui.vim  " user-interface stuff
     source $VIMROOT/config/tags.vim  " tags and stuff
-    source $VIMROOT/config/latex.vim  " Configurations for LaTeX-Vim
+    source $VIMROOT/config/latex.vim  " configurations for LaTeX-Vim
+    source $VIMROOT/config/haskell.vim  " Haskell-specific configs
 endif
 
