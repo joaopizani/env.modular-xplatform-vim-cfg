@@ -46,7 +46,7 @@ endif
 
 set t_Co=256
 colorscheme torte " comes prebundled, is a nice default when ext. plugins are off.
-set textwidth=110
+set textwidth=100
 
 set shortmess+=filmnrxoOtT  " abbrev. of messages (avoids 'hit enter')
 set viewoptions=folds,options,cursor,unix,slash  " better unix / windows compatibility
@@ -55,6 +55,7 @@ set history=500  " Store a ton of history (default is 20)
 set hidden  " allow buffer switching without saving
 set cursorline  " highlight current line
 set laststatus=2  " always display the status line
+set autoindent
 
 
 " command to toggle quickfix window (home-made solution, simple and short)
