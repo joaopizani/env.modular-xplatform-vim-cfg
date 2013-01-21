@@ -32,13 +32,6 @@ if(filereadable(expand("$VIMROOT") . "/runtime/bundle/vundle/README.md"))
     Bundle 'scrooloose/nerdcommenter'
     Bundle 'skwp/vim-easymotion'
 
-    " plugins for Haskell programming
-    Bundle 'Shougo/vimproc'
-    Bundle 'eagletmt/ghcmod-vim'
-    Bundle 'Twinside/vim-haskellFold'
-    Bundle 'Twinside/vim-haskellConceal'
-    Bundle 'feuerbach/vim-hs-module-name'
-
     filetype plugin indent on
 
 
@@ -46,6 +39,5 @@ if(filereadable(expand("$VIMROOT") . "/runtime/bundle/vundle/README.md"))
     source $VIMROOT/config/ui.vim  " user-interface stuff
     source $VIMROOT/config/tags.vim  " tags and stuff
     source $VIMROOT/config/latex.vim  " configurations for LaTeX-Vim
-    source $VIMROOT/config/haskell.vim  " Haskell-specific configs
 endif
 
