@@ -37,7 +37,12 @@ nnoremap <silent> <Leader>ht :GhcModType<CR>
 nnoremap <silent> <Leader>hr :GhcModTypeClear<CR>
 nnoremap <silent> <Leader>hi :GhcModInfoPreview<CR>
 nnoremap <silent> <Leader>he :GhcModInfo<CR>
-nnoremap <silent> <Leader>hc :GhcModCheck<CR>
+
+" in the case of a haskell buffer, F9 is GHC-Mod check instead of normal MakeProg
+nnoremap <silent> <Leader>hc :w<CR>:GhcModCheck<CR>
+nnoremap <silent> <F9>       :w<CR>:GhcModCheck<CR>
+inoremap <silent> <F9>       <ESC>:w<CR>:GhcModCheck<CR>i
+
 nnoremap <silent> <Leader>hl :GhcModLint<CR>
 nnoremap <silent> <Leader>hm :GhcModExpand<CR>
 
