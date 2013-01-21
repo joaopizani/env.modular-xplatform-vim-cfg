@@ -55,12 +55,13 @@ set history=500  " Store a ton of history (default is 20)
 set hidden  " allow buffer switching without saving
 set cursorline  " highlight current line
 set laststatus=2  " always display the status line
+
+" for when syntax-specific indentation is off, this is a nice default
 set autoindent
 
 
 " command to toggle quickfix window (home-made solution, simple and short)
 let g:quickfix_is_open = 0
-
 function! s:QuickfixToggle()
     if g:quickfix_is_open
         cclose
@@ -92,8 +93,10 @@ inoremap <silent> <F7> <ESC>:cn<CR>i
 nnoremap <silent> <F8> :wa<CR>
 inoremap <silent> <F8> <ESC>:wa<CR>i
 
-nnoremap <silent> <F9> :make!<CR>
-inoremap <silent> <F9> <ESC>:make!<CR>i
+" compiling might be remapped by language-specific plugins
+nmap <silent> <F9> :make!<CR>
+imap <silent> <F9> <ESC>:make!<CR>i
+
 
 " Easier moving in windows
 noremap <C-j> <C-W>j
