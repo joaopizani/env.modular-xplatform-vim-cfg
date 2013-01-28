@@ -61,21 +61,17 @@ set autoindent
 
 
 " command to toggle quickfix window (home-made solution, simple and short)
-let g:quickfix_is_open = 0
 function! s:QuickfixToggle()
-    if g:quickfix_is_open
-        cclose
-        let g:quickfix_is_open = 0
-        execute g:quickfix_return_to_window . "wincmd w"
-    else
-        let g:quickfix_return_to_window = winnr()
-        copen
-        let g:quickfix_is_open = 1
-    endif
+    for i in range(1, winnr('$'))
+        let bnum = winbufnr(i)
+        if getbufvar(bnum, '&buftype') == 'quickfix'
+            cclose
+            return
+        endif
+    endfor
+    copen
 endfunction
-
-command ToggleQuickfix :call <SID>QuickfixToggle()
-
+command! ToggleQuickfix call <SID>QuickfixToggle()
 
 
 " mappings
