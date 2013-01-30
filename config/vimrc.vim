@@ -15,11 +15,11 @@ if(filereadable(expand("$VIMROOT") . "/runtime/bundle/vundle/README.md"))
     Bundle 'scrooloose/nerdtree'
     Bundle 'Lokaltog/vim-powerline'
     Bundle 'jnurmine/Zenburn'
-    Bundle 'sjl/gundo.vim'
-    Bundle 'ZoomWin'
+    Bundle 'mbbill/undotree'
     Bundle 'plasticboy/vim-markdown'
     Bundle 'tpope/vim-fugitive'
     Bundle 'kien/ctrlp.vim'
+    Bundle 'ZoomWin'
 
     " LaTeX
     Bundle "LaTeX-Box-Team/LaTeX-Box"

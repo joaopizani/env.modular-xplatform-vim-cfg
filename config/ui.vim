@@ -46,4 +46,4 @@ let g:ctrlp_custom_ignore = {
 
 " mappings
 nnoremap <silent> <Leader>tb :TagbarToggle<CR>
-nnoremap <silent> <Leader>gu :GundoToggle<CR>
+nnoremap <silent> <Leader>gu :UndotreeToggle<CR>
