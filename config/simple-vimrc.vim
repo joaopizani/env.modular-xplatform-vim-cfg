@@ -76,8 +76,11 @@ command! ToggleQuickfix call <SID>QuickfixToggle()
 
 " mappings
 " F-keys
-nnoremap <silent> <F5> :NERDTreeToggle<CR>
-inoremap <silent> <F5> <ESC>:NERDTreeToggle<CR>i
+nnoremap <silent> <F4> :NERDTreeToggle<CR>
+inoremap <silent> <F4> <ESC>:NERDTreeToggle<CR>i
+
+nnoremap <silent> <F5> :TagbarToggle<CR>
+inoremap <silent> <F5> <ESC>:TagbarToggle<CR>i
 
 let g:shell_mappings_enabled = 0
 nnoremap <silent> <F6> :ToggleQuickfix<CR>
@@ -89,7 +92,7 @@ inoremap <silent> <F7> <ESC>:cn<CR>i
 nnoremap <silent> <F8> :wa<CR>
 inoremap <silent> <F8> <ESC>:wa<CR>i
 
-" compiling might be remapped by language-specific plugins
+" compiling might be remapped by language-specific configs
 nmap <silent> <F9> :make!<CR>
 imap <silent> <F9> <ESC>:make!<CR>i
 
