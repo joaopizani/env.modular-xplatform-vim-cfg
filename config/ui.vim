@@ -1,5 +1,5 @@
 " color scheme
-if has('win32') && !has('gui_running')
+if (has('win32') && !has('gui_running')) || !exists("g:bundle_dir")
     colorscheme torte
 else
     colorscheme zenburn
