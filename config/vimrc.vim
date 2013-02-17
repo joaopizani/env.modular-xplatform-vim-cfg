@@ -3,7 +3,9 @@ source $VIMROOT/config/simple-vimrc.vim
 
 
 " vundle and plugins configuration, ONLY if vundle is present
-if(filereadable(expand("$VIMROOT") . "/runtime/bundle/vundle/README.md"))
+let s:vundle_present = filereadable(expand("$VIMROOT") . "/runtime/bundle/vundle/README.md")
+
+if(s:vundle_present)
     filetype off
 
     set rtp+=$VIMROOT/runtime/bundle/vundle/
@@ -33,7 +35,6 @@ if(filereadable(expand("$VIMROOT") . "/runtime/bundle/vundle/README.md"))
     Bundle 'skwp/vim-easymotion'
 
     filetype plugin indent on
-
 
     " Include configurations organized in subject-segregated modules
     source $VIMROOT/config/ui.vim  " user-interface stuff
