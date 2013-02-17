@@ -13,38 +13,41 @@ instructions :)
 
 Basic installation steps
 ------------------------
- * Clone this repo to a directory of your preference, let's call this $PARENT\_DIR from now on:
+### First step - Clone ###
+ * Clone this repo to a directory of your preference, let's call this $REPODIR from now on:
 
-    PARENT_DIR=${HOME}  # or somewhere else, you choose
-    cd ${PARENT_DIR}; git clone http://github.com/joaopizani/modular-xplatform-vim-cfg.git
+```bash
+REPODIR=~/modular-xplatform-vim-cfg   # or something else, you choose
+git clone http://github.com/joaopizani/modular-xplatform-vim-cfg.git $REPODIR
+```
 
- * The second step is operating system specific. After you're done with the second step, the only
-   remaining config - which is OPTIONAL - is to install the recommended plugins.
-
-### Second step on Linux ###
+### Second step on Linux or MacOS X ###
 
  * Create a link called "\_vimrc" in your home directory pointing to the cloned repo:
-   `ln -s ${PARENT_DIR}/modular-xplatform-vim-cfg/_vimrc  ~/_vimrc`.
+
+```bash
+cd $REPODIR
+ln -s $(pwd)/_vimrc  ~/_vimrc
+```
 
 ### Second step on Windows ###
 
- * Go into "$PARENT\_DIR/modular-xplatform-vim-cfg/win" and execute (double-click) the file
-   named "install-vimrc-link.bat".
+ * Go into `$REPODIR/win` and execute (double-click) the file named `install-vimrc-link.bat`
 
-Optional but recommended: installing the set of recommended plugins
--------------------------------------------------------------------
- 1. cd into $PARENT\_DIR/modular-xplatform-vim-cfg and run `git submodule update --init`. You
-    have just added [Vundle](https://github.com/gmarik/vundle) (a very nice® Vim plugin manager)
-    to your config, congratz!
+Optional but recommended: enabling the set of recommended plugins
+-----------------------------------------------------------------
+ 1. Go into `$REPODIR` and run `git submodule update --init`. Congratz! You just enabled
+    [Vundle](https://github.com/gmarik/vundle) (a very nice® Vim plugin manager) in your Vim.
 
- 2. Enter vim and type `:BundleInstall`.
+ 2. Obtain the set of plugins by running `vim +BundleInstall +qall`
 
- 3. DONE. COMPLETELY DONE.
+ 3. DONE. COMPLETELY DONE. Whenever you want to update the plugins, you can do it **inside**
+    Vim by running the command `BundleUpdate`
+
 
 
 Some basic usage instructions
 -----------------------------
-
 ### VERY FREQUENTLY used keymappings ###
 The file `modular-xplatform-vim-cfg/config/simple-vimrc.vim` contains, among other niceties, some
 convenient keymappings for frequent tasks when developing using Vim (at least I find them convenient).
@@ -102,7 +105,7 @@ niceties follows:
    allows you to insert short snippets of code by using "trigger" keywords and the Tab key. It's too awesome
    too describe with words: go see the link above for a screencast. Our setup includes a directory with some
    custom snippets: there are already some there and you can add your own. For example: when you type
-   `author\<Tab\>`, a nice header containing the file author's name and a timestamp will be inserted.
+   `author<Tab>`, a nice header containing the file author's name and a timestamp will be inserted.
 
  * **Parallel builds:** Combines GNU Make "parallel build" feature with Vim's internal "make" command. As
    described in [this blog post](http://joaopizani.hopto.org/en/2012/05/vim-parallel-make).
