@@ -14,24 +14,27 @@ instructions :)
 Basic installation steps
 ------------------------
  * Clone this repo to a directory of your preference, let's call this $PARENT\_DIR from now on:
-   `cd $PARENT_DIR;  git clone http://github.com/joaopizani/modular-xplatform-vim-cfg.git`.
+
+    PARENT_DIR=${HOME}  # or somewhere else, you choose
+    cd ${PARENT_DIR}; git clone http://github.com/joaopizani/modular-xplatform-vim-cfg.git
 
  * The second step is operating system specific. After you're done with the second step, the only
    remaining config - which is OPTIONAL - is to install the recommended plugins.
 
 ### Second step on Linux ###
 
- * Create a link called "\_vimrc" in your $HOME pointing to the cloned repo:
-   `ln -s $PARENT_DIR/modular-xplatform-vim-cfg/_vimrc $HOME/_vimrc`.
+ * Create a link called "\_vimrc" in your home directory pointing to the cloned repo:
+   `ln -s ${PARENT_DIR}/modular-xplatform-vim-cfg/_vimrc  ~/_vimrc`.
 
 ### Second step on Windows ###
 
  * Go into "$PARENT\_DIR/modular-xplatform-vim-cfg/win" and execute (double-click) the file
    named "install-vimrc-link.bat".
 
-### Installing the set of recommended plugins, all at once - OPTIONAL ###
- 1. cd into $PARENT\_DIR/modular-xplatform-vim-cfg and type `git submodule init && git submodule update`.
-    You have just added [Vundle](https://github.com/gmarik/vundle) (a very nice® Vim plugin manager)
+Optional but recommended: installing the set of recommended plugins
+-------------------------------------------------------------------
+ 1. cd into $PARENT\_DIR/modular-xplatform-vim-cfg and run `git submodule update --init`. You
+    have just added [Vundle](https://github.com/gmarik/vundle) (a very nice® Vim plugin manager)
     to your config, congratz!
 
  2. Enter vim and type `:BundleInstall`.
@@ -42,12 +45,13 @@ Basic installation steps
 Some basic usage instructions
 -----------------------------
 
-### Frequently used keymappings ###
+### VERY FREQUENTLY used keymappings ###
 The file `modular-xplatform-vim-cfg/config/simple-vimrc.vim` contains, among other niceties, some
-convenient keymappings for frequent tasks when programming using Vim (at least I find them convenient).
+convenient keymappings for frequent tasks when developing using Vim (at least I find them convenient).
 You can of course edit the file to your liking, but the default mappings are:
 
- * **F5:** Opens/closes the NERDTree filesystem navigation sidebar.
+ * **F4:** Opens/closes the NERDTree filesystem navigation sidebar.
+ * **F5:** Opens/closes the Tagbar navigation sidebar, gives an "outline" of the current file.
  * **F6:** Toggles the *Quickfix* window, i.e, opens it if it's closed and closes it if already open.
  * **F7:** Goes to the next *Quickfix* error (:cn).
  * **F8:** Saves changes to all open buffers (:wa).
@@ -55,12 +59,12 @@ You can of course edit the file to your liking, but the default mappings are:
 
 **Important:** All abovementioned mappings also work in insert mode.
 
+ * **Ctrl+p:** Opens a prompt for easy most-recently-used and intelligent file and buffer search
+
  * **,pp:** Toggles PASTE mode. PASTE mode is useful for when you want to paste formatted text into vim (for
    example, from the web), and don't want vim to mess with it by trying to indent or format it further.
  * **,hl:** Toggles search highlighting. After doing a search, it can be useful to have all the results
    highlighted, but if you want to toggle this setting, use this short mapping :)
-
- * **Ctrl+p:** Opens a window for easy most-recently-used and intelligent file and buffer search
 
 ### Moving between split windows, resizing and maximizing/restoring them ###
 When using Vim for programming, you often end up using a lot of open buffers, shown in split windows spread
@@ -76,7 +80,7 @@ across your screen. Thus, we added easy mappings to facilitate moving between an
    **non-intuitive**, however: When you are in the topmost window and press Alt+Up, the window will go
    **down** (increase height), and if you are in the rightmost window and press Alt+Right, the window will
    go **left** (increase width).
- * **\<Ctrl\>w+o:** By pressing this combination, you will maximize the current split to occuppy the whole
+ * **\<Ctrl\>w+o:** By pressing this combination, you will maximize the current split to occupy the whole
    screen. By pressing the same combination again, the previous split configuration is completely restored.
 
 ### Miscellaneous nice stuff going on under the covers ###
@@ -85,14 +89,14 @@ using Vim, and require no intervention from the user (they just work® by defaul
 niceties follows:
 
  * **Segregated Vim metafiles:** Vim has the bad habit of polluting the user's working directory with backup
-   files (myfile~), swap files (.myfile.swp), undo files, etc. My config segregates all these files into a
-   central directory: `modular-xplatform-vim-cfg/runtime/{backup,swap,undo,views}`.
+   files (myfile~), swap files (.myfile.swp), undo files, etc. My config segregates all these files into
+   central directories: `modular-xplatform-vim-cfg/runtime/{backup,swap,undo,views}`.
 
  * **Easy and organized plugin management:** Our setup uses [Vundle](https://github.com/gmarik/vundle), the
    *Mother of All Plugins* for Vim. Vundle is like a package manager for Vim plugins. You have a list of your
    installed plugins under `modular-xplatform-vim-cfg/config/vimrc.vim`; you can install and/or update plugins
-   by using the command `:BundleInstall` and uninstall by using `BundleClean`. All plugins are kept under a
-   single directory, one plugin per subdirectory.
+   by using the command `:BundleInstall!` and uninstall by using `BundleClean!`. All plugins are kept under a
+   single directory, with one plugin per subdirectory.
 
  * **Code snippets:** Includes the awesome [snipmate](http://vimeo.com/3535418) plugin, which
    allows you to insert short snippets of code by using "trigger" keywords and the Tab key. It's too awesome
@@ -104,17 +108,15 @@ niceties follows:
    described in [this blog post](http://joaopizani.hopto.org/en/2012/05/vim-parallel-make).
 
  * **Automatic, EASY tags:** By using the [easytags](https://github.com/xolox/vim-easytags), tags are
-   generated, regenerated whenever necessary and managed automatically and in a central
-   location. Our setup includes settings which fine-tune easytags for an even smoother experience. These
+   generated, regenerated whenever necessary and managed automatically and in a central location. Our
+   setup includes settings which fine-tune easytags for an even smoother experience. These
    customizations of the plugin are located in `modular-xplatform-vim-cfg/config/tags.vim`.
 
  * **Easy-on-the-eyes, 256-colors colorscheme:** Whenever the terminal in which you are running Vim allows,
-   our setup uses a very comfortable 256 colors colorscheme, namely,
-   [Zenburn](https://github.com/jnurmine/Zenburn).
+   we use a very comfortable 256-colors colorscheme, namely, [Zenburn](https://github.com/jnurmine/Zenburn).
 
  * **Tagbar for outline-like code navigation:** If you have ever used the "outline" feature of heavyweight
    IDEs, you will feel at home with [Tagbar](https://github.com/majutsushi/tagbar). You can show a sidebar
-   with an outline of your file (functions, classes, etc.) by typing ",tb". Clicking (or pressing Enter)
+   with an outline of your file (functions, classes, etc.) by pressing F5. Clicking (or pressing Enter)
    over a tag will take you to that part of the code).
-
 
