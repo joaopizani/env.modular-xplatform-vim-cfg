@@ -52,7 +52,6 @@ set shortmess+=filmnrxoOtT  " abbrev. of messages (avoids 'hit enter')
 set viewoptions=folds,options,cursor,unix,slash  " better unix / windows compatibility
 set virtualedit=onemore  " allow for cursor beyond last character
 set history=500  " Store a ton of history (default is 20)
-set hidden  " allow buffer switching without saving
 set cursorline  " highlight current line
 set laststatus=2  " always display the status line
 
