@@ -14,25 +14,23 @@ instructions :)
 Basic installation steps
 ------------------------
 ### First step - Clone ###
- * Clone this repo to a directory of your preference, let's call this $REPODIR from now on:
+ * Clone this repo to a directory of your preference, let's call this $REPO from now on:
 
 ```bash
-REPODIR=~/modular-xplatform-vim-cfg   # or something else, you choose
-git clone http://github.com/joaopizani/modular-xplatform-vim-cfg.git $REPODIR
+REPO=~/modular-xplatform-vim-cfg; git clone http://github.com/joaopizani/modular-xplatform-vim-cfg.git $REPO
 ```
 
-### Second step on Linux or MacOS X ###
+### Second step - Link (OS-Specific) ###
 
- * Create a link called "\_vimrc" in your home directory pointing to the cloned repo:
+ * **Linux, BSD, Mac OS X:** Create a link called "\_vimrc" in your home directory
+   pointing to the cloned repo:
 
 ```bash
-cd $REPODIR
-ln -s $(pwd)/_vimrc  ~/_vimrc
+ln -s ${REPO}/_vimrc  ~/_vimrc
 ```
 
-### Second step on Windows ###
-
- * Go into `$REPODIR/win` and execute (double-click) the file named `install-vimrc-link.bat`
+ * **Windows:** Go into `$REPODIR/win` and execute (double-click) the
+   file named `install-vimrc-link.bat`
 
 Optional but recommended: enabling the set of recommended plugins
 -----------------------------------------------------------------
