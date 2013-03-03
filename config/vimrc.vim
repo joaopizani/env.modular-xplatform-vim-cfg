@@ -33,6 +33,7 @@ if(s:neobundle_present)
     NeoBundle 'tpope/vim-fugitive'
     NeoBundle 'kien/ctrlp.vim'
     NeoBundle 'ZoomWin'
+    NeoBundle 'godlygeek/tabular'
 
     " LaTeX
     NeoBundle "LaTeX-Box-Team/LaTeX-Box"
