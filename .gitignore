@@ -1,4 +1,4 @@
 /runtime/**
-!/runtime/bundle/vundle
+!/runtime/bundle/neobundle.vim
 !/runtime/tags/.dummy
 !/runtime/ctrlp/cache/.dummy
