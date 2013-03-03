@@ -41,10 +41,11 @@ if(s:neobundle_present)
     " plugins for programming (language-independent)
     NeoBundle 'majutsushi/tagbar'
     NeoBundle 'xolox/vim-easytags'
-    NeoBundle 'msanders/snipmate.vim'
     NeoBundle 'tpope/vim-ragtag'
     NeoBundle 'scrooloose/nerdcommenter'
     NeoBundle 'skwp/vim-easymotion'
+    NeoBundle 'Shougo/neocomplcache'
+    NeoBundle 'Shougo/neosnippet'
 
     filetype plugin indent on
 

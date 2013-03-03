@@ -23,11 +23,6 @@ let laststatus=2
 let g:Powerline_symbols='unicode'
 
 
-" snipMate
-let g:snips_author ='João Paulo Pizani Flor'
-let g:snippets_dir = expand('$VIMROOT/runtime/bundle/snipmate.vim/snippets') . ',' . expand('$VIMROOT/custom-snippets')
-
-
 " ctrlp
 let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_working_path_mode = 'ra'
