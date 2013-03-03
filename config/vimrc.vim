@@ -3,36 +3,45 @@ source $VIMROOT/config/simple-vimrc.vim
 
 
 " vundle and plugins configuration, ONLY if vundle is present
-let s:vundle_present = filereadable(expand("$VIMROOT") . "/runtime/bundle/vundle/README.md")
+let s:neobundle_present = filereadable(expand("$VIMROOT") . "/runtime/bundle/neobundle.vim/README.md")
 
 if(s:vundle_present)
-    filetype off
+    if has('vim_starting')
+        set rtp+=$VIMROOT/runtime/bundle/neobundle.vim/
+    endif
 
-    set rtp+=$VIMROOT/runtime/bundle/vundle/
-    call vundle#rc('$VIMROOT/runtime/bundle')
+    call neobundle#rc(expand('$VIMROOT/runtime/bundle/'))
 
-    Bundle 'gmarik/vundle'
+    NeoBundleFetch 'Shougo/neobundle.vim' " let neobundle manage itself
+    NeoBundle 'Shougo/vimproc', { \ "useful for some other plugins
+        'build' : { \
+            'windows' : 'make -f make_mingw32.mak', \
+            'cygwin' : 'make -f make_cygwin.mak', \
+            'mac' : 'make -f make_mac.mak', \
+            'unix' : 'make -f make_unix.mak', \
+        }, \
+    }
 
     " general-purpose plugins
-    Bundle 'scrooloose/nerdtree'
-    Bundle 'Lokaltog/vim-powerline'
-    Bundle 'jnurmine/Zenburn'
-    Bundle 'mbbill/undotree'
-    Bundle 'plasticboy/vim-markdown'
-    Bundle 'tpope/vim-fugitive'
-    Bundle 'kien/ctrlp.vim'
-    Bundle 'ZoomWin'
+    NeoBundle 'scrooloose/nerdtree'
+    NeoBundle 'Lokaltog/vim-powerline'
+    NeoBundle 'jnurmine/Zenburn'
+    NeoBundle 'mbbill/undotree'
+    NeoBundle 'plasticboy/vim-markdown'
+    NeoBundle 'tpope/vim-fugitive'
+    NeoBundle 'kien/ctrlp.vim'
+    NeoBundle 'ZoomWin'
 
     " LaTeX
-    Bundle "LaTeX-Box-Team/LaTeX-Box"
+    NeoBundle "LaTeX-Box-Team/LaTeX-Box"
 
     " plugins for programming (language-independent)
-    Bundle 'majutsushi/tagbar'
-    Bundle 'xolox/vim-easytags'
-    Bundle 'msanders/snipmate.vim'
-    Bundle 'tpope/vim-ragtag'
-    Bundle 'scrooloose/nerdcommenter'
-    Bundle 'skwp/vim-easymotion'
+    NeoBundle 'majutsushi/tagbar'
+    NeoBundle 'xolox/vim-easytags'
+    NeoBundle 'msanders/snipmate.vim'
+    NeoBundle 'tpope/vim-ragtag'
+    NeoBundle 'scrooloose/nerdcommenter'
+    NeoBundle 'skwp/vim-easymotion'
 
     filetype plugin indent on
 
