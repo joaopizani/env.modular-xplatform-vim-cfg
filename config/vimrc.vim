@@ -5,7 +5,7 @@ source $VIMROOT/config/simple-vimrc.vim
 " vundle and plugins configuration, ONLY if vundle is present
 let s:neobundle_present = filereadable(expand("$VIMROOT") . "/runtime/bundle/neobundle.vim/README.md")
 
-if(s:vundle_present)
+if(s:neobundle_present)
     if has('vim_starting')
         set rtp+=$VIMROOT/runtime/bundle/neobundle.vim/
     endif
