@@ -34,8 +34,8 @@ else
     let g:ctrlp_mruf_case_sensitive = 1
 endif
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn|bzr)$',
-  \ 'file': '\v\.(exe|so|dll|o|swp|pyc|wav|mp3|ogg)$',
+  \ 'dir':  '\v[\/](.git|.hg|.svn|.bzr|bin|cabal-dev|dist)$',
+  \ 'file': '\v\.(exe|so|dll|o|swp|pyc|wav|mp3|ogg|pdf|hi)$',
   \ }
 
 
