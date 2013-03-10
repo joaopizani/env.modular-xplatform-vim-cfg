@@ -42,6 +42,10 @@ let g:neocomplcache_disable_auto_complete = 1
 let g:neocomplcache_temporary_dir = expand("$VIMROOT") . '/runtime/neocomplcache'
 
 " neosnippets
+let g:extrasnips = expand("$VIMROOT") . '/snippets'
+let g:neosnippet#snippets_directory = g:extrasnips . '/honza-snippets/snippets,' . g:extrasnips . '/custom'
+let g:neosnippet#enable_snipmate_compatibility = 1
+
 imap <C-k>  <Plug>(neosnippet_expand_or_jump)
 smap <C-k>  <Plug>(neosnippet_expand_or_jump)
 if has('conceal')
