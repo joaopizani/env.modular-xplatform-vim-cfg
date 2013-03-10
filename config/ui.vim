@@ -19,6 +19,12 @@ let g:tagbar_width=30
 let laststatus=2
 let g:Powerline_symbols='unicode'
 
+" tabular alignment mappings
+if exists(":Tabularize")
+    nmap <Leader>a= :Tabularize /=<CR>
+    vmap <Leader>a= :Tabularize /=<CR>
+endif
+
 " ctrlp
 let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_working_path_mode = 'ra'
@@ -53,6 +59,6 @@ if has('conceal')
 endif
 
 
-" mappings
+" general mappings
 nnoremap <silent> <Leader>gu :UndotreeToggle<CR>
 
