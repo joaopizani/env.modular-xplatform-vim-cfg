@@ -125,16 +125,6 @@ nnoremap <silent> <Leader>pp :set paste!<CR>
 nnoremap <silent> <Leader>nn :set number!<CR>
 
 
-" Ctrl-Space autocomplete
-if has("gui_running")
-    inoremap <C-Space> <C-x><C-o>
-else 
-    if has("unix")
-        inoremap <Nul> <C-x><C-o>
-    endif
-endif
-
-
 
 " set makeprg so that when you activate :make, then make -j<N+1> is run, where N is
 " the exact number of processor cores in your machine.
