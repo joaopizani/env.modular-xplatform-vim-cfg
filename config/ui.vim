@@ -41,5 +41,14 @@ let g:neocomplcache_auto_completion_start_length = 3
 let g:neocomplcache_disable_auto_complete = 1
 let g:neocomplcache_temporary_dir = expand("$VIMROOT") . '/runtime/neocomplcache'
 
+" neosnippets
+imap <C-k>  <Plug>(neosnippet_expand_or_jump)
+smap <C-k>  <Plug>(neosnippet_expand_or_jump)
+if has('conceal')
+    set conceallevel=2 concealcursor=i
+endif
+
+
 " mappings
 nnoremap <silent> <Leader>gu :UndotreeToggle<CR>
+
