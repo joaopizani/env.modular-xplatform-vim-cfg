@@ -17,7 +17,7 @@ Basic installation steps
  * Clone this repo to a directory of your preference, let's call this $REPO from now on:
 
 ```bash
-REPO=~/modular-vim-cfg; git clone http://github.com/joaopizani/modular-xplatform-vim-cfg.git $REPO
+REPO=~/modvim; git clone http://github.com/joaopizani/modular-xplatform-vim-cfg.git $REPO
 ```
 
 ### Second step - Link (OS-Specific) ###
@@ -47,16 +47,16 @@ Optional but recommended: enabling the set of recommended plugins
 Some basic usage instructions
 -----------------------------
 ### VERY FREQUENTLY used keymappings ###
-The file `modular-xplatform-vim-cfg/config/simple-vimrc.vim` contains, among other niceties, some
+The file `$REPO/config/simple-vimrc.vim` contains, among other niceties, some
 convenient keymappings for frequent tasks when developing using Vim (at least I find them convenient).
 You can of course edit the file to your liking, but the default mappings are:
 
- * **F3:** Opens/closes the NERDTree filesystem navigation sidebar.
- * **F4:** Opens/closes the Tagbar navigation sidebar, gives an "outline" of the current file.
- * **F5:** Toggles the *Quickfix* window, i.e, opens it if it's closed and closes it if already open.
- * **F6:** Goes to the next *Quickfix* error (:cn).
- * **F7:** Saves changes to all open buffers (:wa).
- * **F8:** Builds the "project" (issues the "make!" command), **without** jumping to the first error.
+ * **F4:** Opens/closes the NERDTree filesystem navigation sidebar.
+ * **F5:** Opens/closes the Tagbar navigation sidebar, gives an "outline" of the current file.
+ * **F6:** Toggles the *Quickfix* window, i.e, opens it if it's closed and closes it if already open.
+ * **F7:** Goes to the next *Quickfix* error (:cn).
+ * **F8:** Saves changes to all open buffers (:wa).
+ * **F9:** Builds the "project" (issues the "make!" command), **without** jumping to the first error.
 
 **Important:** All abovementioned mappings also work in insert mode.
 
@@ -82,8 +82,8 @@ across your screen. Thus, we added easy mappings to facilitate moving between an
    **non-intuitive**, however: When you are in the topmost window and press Alt+Up, the window will go
    **down** (increase height), and if you are in the rightmost window and press Alt+Right, the window will
    go **left** (increase width).
- * **\<Ctrl\>w+o:** By pressing this combination, you will maximize the current split to occupy the whole
-   screen. By pressing the same combination again, the previous split configuration is completely restored.
+ * **F3:** By pressing this, you will maximize the current split window to occupy the whole screen. By
+   pressing the same combination again, the previous split configuration is _completely_ restored.
 
 ### Miscellaneous nice stuff going on under the covers ###
 Some nice settings and plugins are in place which make (at least I think) any programmer's life easier while
@@ -104,16 +104,11 @@ niceties follows:
    allows you to insert short snippets of code by using "trigger" keywords and the Tab key. It's too awesome
    too describe with words: go see the [screencast](http://www.youtube.com/watch?v=TNMjbaimk9g).
    Our setup includes a directory for custom snippets: there are already some there and you can add your own.
-   For example: when you type `author<Tab>`, a nice header containing the file author's name and a timestamp
+   For example: when you type `author<Ctrl-k>`, a nice header containing the file author's name and a timestamp
    will be inserted.
 
  * **Parallel builds:** Combines GNU Make "parallel build" feature with Vim's internal "make" command. As
    described in [this blog post](http://joaopizani.hopto.org/en/2012/05/vim-parallel-make).
-
- * **Automatic, EASY tags:** By using the [easytags](https://github.com/xolox/vim-easytags), tags are
-   generated, regenerated whenever necessary and managed automatically and in a central location. Our
-   setup includes settings which fine-tune easytags for an even smoother experience. These
-   customizations of the plugin are located in `modular-xplatform-vim-cfg/config/tags.vim`.
 
  * **Easy-on-the-eyes, 256-colors colorscheme:** Whenever the terminal in which you are running Vim allows,
    we use a very comfortable 256-colors colorscheme, namely, [Zenburn](https://github.com/jnurmine/Zenburn).
