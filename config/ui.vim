@@ -23,6 +23,14 @@ let g:Powerline_symbols='unicode'
 if exists(":Tabularize")
     nmap <Leader>== :Tabularize /=<CR>
     vmap <Leader>== :Tabularize /=<CR>
+    nmap <Leader>=, :Tabularize /,<CR>
+    vmap <Leader>=, :Tabularize /,<CR>
+    nmap <Leader>=( :Tabularize /(<CR>
+    vmap <Leader>=( :Tabularize /(<CR>
+    nmap <Leader>=) :Tabularize /)<CR>
+    vmap <Leader>=) :Tabularize /)<CR>
+    nmap <Leader>=| :Tabularize /|<CR>
+    vmap <Leader>=| :Tabularize /|<CR>
 endif
 
 " ctrlp

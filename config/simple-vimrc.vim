@@ -130,6 +130,11 @@ nnoremap <silent> <Leader>pp :set paste!<CR>
 nnoremap <silent> <Leader>nn :set number!<CR>
 
 
+" shortcut for activating user-defined completion both in Vim and GVim. Main use is with
+" Neocomplcache, but per se, this binding is plugin-independent.
+imap <C-Space> <C-x><C-u>
+imap <C-@> <C-Space>
+
 
 " set makeprg so that when you activate :make, then make -j<N+1> is run, where N is
 " the exact number of processor cores in your machine.
