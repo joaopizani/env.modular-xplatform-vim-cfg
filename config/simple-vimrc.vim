@@ -45,9 +45,14 @@ if has("gui_running")
 endif
 
 set t_Co=256
-colorscheme torte " comes prebundled, is a nice default when ext. plugins are off.
-set textwidth=100
+if &term =~ '256color'
+    " Disable Background Color Erase so that color schemes work properly when Vim is
+    " inside tmux and GNU screen. See http://snk.tuxfamily.org/log/vim-256color-bce.html
+    set t_ut=
+endif
+colorscheme torte " comes prebundled, is a nice default when plugins are off
 
+set textwidth=100
 set shortmess+=filmnrxoOtT  " abbrev. of messages (avoids 'hit enter')
 set viewoptions=folds,options,cursor,unix,slash  " better unix / windows compatibility
 set virtualedit=onemore  " allow for cursor beyond last character
