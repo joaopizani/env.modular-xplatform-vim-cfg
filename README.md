@@ -51,12 +51,12 @@ The file `modular-xplatform-vim-cfg/config/simple-vimrc.vim` contains, among oth
 convenient keymappings for frequent tasks when developing using Vim (at least I find them convenient).
 You can of course edit the file to your liking, but the default mappings are:
 
- * **F4:** Opens/closes the NERDTree filesystem navigation sidebar.
- * **F5:** Opens/closes the Tagbar navigation sidebar, gives an "outline" of the current file.
- * **F6:** Toggles the *Quickfix* window, i.e, opens it if it's closed and closes it if already open.
- * **F7:** Goes to the next *Quickfix* error (:cn).
- * **F8:** Saves changes to all open buffers (:wa).
- * **F9:** Builds the "project" (issues the "make!" command), **without** jumping to the first error.
+ * **F3:** Opens/closes the NERDTree filesystem navigation sidebar.
+ * **F4:** Opens/closes the Tagbar navigation sidebar, gives an "outline" of the current file.
+ * **F5:** Toggles the *Quickfix* window, i.e, opens it if it's closed and closes it if already open.
+ * **F6:** Goes to the next *Quickfix* error (:cn).
+ * **F7:** Saves changes to all open buffers (:wa).
+ * **F8:** Builds the "project" (issues the "make!" command), **without** jumping to the first error.
 
 **Important:** All abovementioned mappings also work in insert mode.
 

@@ -75,25 +75,25 @@ command! ToggleQuickfix call <SID>QuickfixToggle()
 
 " mappings
 " F-keys
-nnoremap <silent> <F4> :NERDTreeToggle<CR>
-inoremap <silent> <F4> <ESC>:NERDTreeToggle<CR>i
+nnoremap <silent> <F3> :NERDTreeToggle<CR>
+inoremap <silent> <F3> <ESC>:NERDTreeToggle<CR>i
 
-nnoremap <silent> <F5> :TagbarToggle<CR>
-inoremap <silent> <F5> <ESC>:TagbarToggle<CR>i
+nnoremap <silent> <F4> :TagbarToggle<CR>
+inoremap <silent> <F4> <ESC>:TagbarToggle<CR>i
 
 let g:shell_mappings_enabled = 0
-nnoremap <silent> <F6> :ToggleQuickfix<CR>
-inoremap <silent> <F6> <ESC>:ToggleQuickfix<CR>i
+nnoremap <silent> <F5> :ToggleQuickfix<CR>
+inoremap <silent> <F5> <ESC>:ToggleQuickfix<CR>i
 
-nnoremap <silent> <F7> :cn<CR>
-inoremap <silent> <F7> <ESC>:cn<CR>i
+nnoremap <silent> <F6> :cn<CR>
+inoremap <silent> <F6> <ESC>:cn<CR>i
 
-nnoremap <silent> <F8> :wa<CR>
-inoremap <silent> <F8> <ESC>:wa<CR>i
+nnoremap <silent> <F7> :wa<CR>
+inoremap <silent> <F7> <ESC>:wa<CR>i
 
 " compiling might be remapped by language-specific configs
-nmap <silent> <F9> :make!<CR>
-imap <silent> <F9> <ESC>:make!<CR>i
+nmap <silent> <F8> :make!<CR>
+imap <silent> <F8> <ESC>:make!<CR>i
 
 
 " Easier moving in windows
