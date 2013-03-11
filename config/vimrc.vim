@@ -32,7 +32,7 @@ if(s:neobundle_present)
     NeoBundle 'plasticboy/vim-markdown'
     NeoBundle 'tpope/vim-fugitive'
     NeoBundle 'kien/ctrlp.vim'
-    NeoBundle 'ZoomWin'
+    NeoBundle 'szw/vim-maximizer'
     NeoBundle 'godlygeek/tabular'
 
     " LaTeX
