@@ -29,7 +29,7 @@ REPO=~/modvim; git clone http://github.com/joaopizani/modular-xplatform-vim-cfg.
 ln -s ${REPO}/_vimrc  ~/_vimrc
 ```
 
- * **Windows:** Go into `$REPODIR/win` and execute (double-click) the
+ * **Windows:** Go into `${REPO}/win` and execute (double-click) the
    file named `install-vimrc-link.bat`
 
 Optional but recommended: enabling the set of recommended plugins
@@ -47,7 +47,7 @@ Optional but recommended: enabling the set of recommended plugins
 Some basic usage instructions
 -----------------------------
 ### VERY FREQUENTLY used keymappings ###
-The file `$REPO/config/simple-vimrc.vim` contains, among other niceties, some
+The file `${REPO}/config/simple-vimrc.vim` contains, among other niceties, some
 convenient keymappings for frequent tasks when developing using Vim (at least I find them convenient).
 You can of course edit the file to your liking, but the default mappings are:
 
@@ -92,7 +92,7 @@ niceties follows:
 
  * **Segregated Vim metafiles:** Vim has the bad habit of polluting the user's working directory with backup
    files (myfile~), swap files (.myfile.swp), undo files, etc. My config segregates all these files into
-   central directories: `modular-xplatform-vim-cfg/runtime/{backup,swap,undo,views}`.
+   central directories: `${REPO}/runtime/{backup,swap,undo,views}`.
 
  * **Easy and organized plugin management:** Our setup uses [NeoBundle](https://github.com/Shougo/neobundle.vim),
    the *Mother of All Plugins* for Vim. NeoBundle is like a package manager for Vim plugins. You have a list of your
@@ -101,11 +101,11 @@ niceties follows:
    single directory, with one plugin per subdirectory.
 
  * **Code snippets:** Includes the awesome [neosnippet](https://github.com/Shougo/neosnippet) plugin, which
-   allows you to insert short snippets of code by using "trigger" keywords and the Tab key. It's too awesome
-   too describe with words: go see the [screencast](http://www.youtube.com/watch?v=TNMjbaimk9g).
+   allows you to insert short snippets of code by using "trigger" keywords and the `<Ctrl-K>` key. It's too
+   awesome too describe with words: go see the [screencast](http://www.youtube.com/watch?v=TNMjbaimk9g).
    Our setup includes a directory for custom snippets: there are already some there and you can add your own.
-   For example: when you type `author<Ctrl-k>`, a nice header containing the file author's name and a timestamp
-   will be inserted.
+   For example: when you type `author<Ctrl-k>`, a nice header containing the file author's name and a
+   timestamp will be inserted.
 
  * **Parallel builds:** Combines GNU Make "parallel build" feature with Vim's internal "make" command. As
    described in [this blog post](http://joaopizani.hopto.org/en/2012/05/vim-parallel-make).
