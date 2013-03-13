@@ -2,7 +2,7 @@
 source $VIMROOT/config/simple-vimrc.vim
 
 
-" vundle and plugins configuration, ONLY if vundle is present
+" detects whether the neobundle plugin manager is present.
 let s:neobundle_present = filereadable(expand("$VIMROOT") . "/runtime/bundle/neobundle.vim/README.md")
 
 if(s:neobundle_present)

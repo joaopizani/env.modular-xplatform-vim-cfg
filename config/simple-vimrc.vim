@@ -33,14 +33,14 @@ nnoremap k gk
 
 " UI
 if has("gui_running")
-    set lines=47
-    set columns=160
+    set lines=45
+    set columns=135
     set guioptions-=T  "remove toolbar
     set guioptions-=r  "remove right-hand scroll bar
     if has("win32")
-        set guifont=Courier_New:h9:cANSI
+        set guifont=Courier_New:h10:cANSI
     else
-        set guifont=Monospace\ 9
+        set guifont=Monospace\ 10
     endif
 endif
 
@@ -86,7 +86,6 @@ inoremap <silent> <F4> <ESC>:NERDTreeToggle<CR>i
 nnoremap <silent> <F5> :TagbarToggle<CR>
 inoremap <silent> <F5> <ESC>:TagbarToggle<CR>i
 
-let g:shell_mappings_enabled = 0
 nnoremap <silent> <F6> :ToggleQuickfix<CR>
 inoremap <silent> <F6> <ESC>:ToggleQuickfix<CR>i
 
@@ -167,10 +166,7 @@ function! InitializeDirectories()
     let separator = "."
     let parent = expand("$VIMROOT")
     let prefix = "runtime"
-    let dir_list = {
-                \ 'backup': 'backupdir',
-                \ 'views': 'viewdir',
-                \ 'swap': 'directory' }
+    let dir_list = {'backup': 'backupdir',   'views': 'viewdir',   'swap': 'directory'}
     if has('persistent_undo')
         let dir_list['undo'] = 'undodir'
     endif
@@ -201,7 +197,6 @@ if has("vms")
 else
     set backup     " keep a backup file
 endif
-set history=50     " keep 50 lines of command line history
 set ruler          " show the cursor position all the time
 set showcmd        " display incomplete commands
 set incsearch      " do incremental searching
@@ -242,11 +237,6 @@ if has("autocmd")
       \ endif
 
     augroup END
-
-    " switch on syntax highlighting
-    syntax on
-else
-    set autoindent  " always set autoindenting on
 endif " has("autocmd")
 
 

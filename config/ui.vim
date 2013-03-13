@@ -21,16 +21,16 @@ let g:Powerline_symbols='unicode'
 
 " tabular alignment mappings
 if exists(":Tabularize")
-    nmap <Leader>== :Tabularize /=<CR>
-    vmap <Leader>== :Tabularize /=<CR>
-    nmap <Leader>=, :Tabularize /,<CR>
-    vmap <Leader>=, :Tabularize /,<CR>
-    nmap <Leader>=( :Tabularize /(<CR>
-    vmap <Leader>=( :Tabularize /(<CR>
-    nmap <Leader>=) :Tabularize /)<CR>
-    vmap <Leader>=) :Tabularize /)<CR>
-    nmap <Leader>=| :Tabularize /|<CR>
-    vmap <Leader>=| :Tabularize /|<CR>
+    nmap <leader>== :Tabularize /=<CR>
+    vmap <leader>== :Tabularize /=<CR>
+    nmap <leader>=, :Tabularize /,<CR>
+    vmap <leader>=, :Tabularize /,<CR>
+    nmap <leader>=( :Tabularize /(<CR>
+    vmap <leader>=( :Tabularize /(<CR>
+    nmap <leader>=) :Tabularize /)<CR>
+    vmap <leader>=) :Tabularize /)<CR>
+    nmap <leader>=| :Tabularize /|<CR>
+    vmap <leader>=| :Tabularize /|<CR>
 endif
 
 " ctrlp
