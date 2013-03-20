@@ -25,6 +25,7 @@ if(s:neobundle_present)
     \ }
 
     " general-purpose plugins
+    NeoBundle 'godlygeek/tabular'
     NeoBundle 'scrooloose/nerdtree'
     NeoBundle 'Lokaltog/vim-powerline'
     NeoBundle 'jnurmine/Zenburn'
@@ -33,7 +34,6 @@ if(s:neobundle_present)
     NeoBundle 'tpope/vim-fugitive'
     NeoBundle 'kien/ctrlp.vim'
     NeoBundle 'szw/vim-maximizer'
-    NeoBundle 'godlygeek/tabular'
 
     " LaTeX
     NeoBundle "LaTeX-Box-Team/LaTeX-Box"
