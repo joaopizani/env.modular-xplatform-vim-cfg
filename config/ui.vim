@@ -20,18 +20,16 @@ let laststatus=2
 let g:Powerline_symbols='unicode'
 
 " tabular alignment mappings
-if exists(":Tabularize")
-    nmap <leader>== :Tabularize /=<CR>
-    vmap <leader>== :Tabularize /=<CR>
-    nmap <leader>=, :Tabularize /,<CR>
-    vmap <leader>=, :Tabularize /,<CR>
-    nmap <leader>=( :Tabularize /(<CR>
-    vmap <leader>=( :Tabularize /(<CR>
-    nmap <leader>=) :Tabularize /)<CR>
-    vmap <leader>=) :Tabularize /)<CR>
-    nmap <leader>=| :Tabularize /|<CR>
-    vmap <leader>=| :Tabularize /|<CR>
-endif
+nmap <leader>== :Tabularize /=<CR>
+vmap <leader>== :Tabularize /=<CR>
+nmap <leader>=, :Tabularize /,<CR>
+vmap <leader>=, :Tabularize /,<CR>
+nmap <leader>=( :Tabularize /(<CR>
+vmap <leader>=( :Tabularize /(<CR>
+nmap <leader>=) :Tabularize /)<CR>
+vmap <leader>=) :Tabularize /)<CR>
+nmap <leader>=| :Tabularize /|<CR>
+vmap <leader>=| :Tabularize /|<CR>
 
 " ctrlp
 let g:ctrlp_cmd = 'CtrlPMixed'
@@ -50,8 +48,6 @@ let g:ctrlp_custom_ignore = {
 
 " NeoComplCache
 let g:neocomplcache_enable_at_startup = 1
-let g:neocomplcache_max_list = 20
-let g:neocomplcache_auto_completion_start_length = 3
 let g:neocomplcache_disable_auto_complete = 1
 let g:neocomplcache_temporary_dir = expand("$VIMROOT") . '/runtime/neocomplcache'
 
@@ -60,11 +56,6 @@ let g:extrasnips = expand("$VIMROOT") . '/snippets'
 let g:neosnippet#snippets_directory = g:extrasnips . '/honza-snippets/snippets,' . g:extrasnips . '/custom'
 let g:neosnippet#enable_snipmate_compatibility = 1
 
-imap <C-k>  <Plug>(neosnippet_expand_or_jump)
-smap <C-k>  <Plug>(neosnippet_expand_or_jump)
-if has('conceal')
-    set conceallevel=2 concealcursor=i
-endif
 
 
 " general mappings
