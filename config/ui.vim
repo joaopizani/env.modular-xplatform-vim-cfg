@@ -20,16 +20,16 @@ let laststatus=2
 let g:Powerline_symbols='unicode'
 
 " tabular alignment mappings
-nmap <leader>== :Tabularize /=<CR>
-vmap <leader>== :Tabularize /=<CR>
-nmap <leader>=, :Tabularize /,<CR>
-vmap <leader>=, :Tabularize /,<CR>
-nmap <leader>=( :Tabularize /(<CR>
-vmap <leader>=( :Tabularize /(<CR>
-nmap <leader>=) :Tabularize /)<CR>
-vmap <leader>=) :Tabularize /)<CR>
-nmap <leader>=| :Tabularize /|<CR>
-vmap <leader>=| :Tabularize /|<CR>
+nmap <leader>l=     :Tabularize /=<CR>
+vmap <leader>l=     :Tabularize /=<CR>
+nmap <leader>l,     :Tabularize /,<CR>
+vmap <leader>l,     :Tabularize /,<CR>
+nmap <leader>l(     :Tabularize /(<CR>
+vmap <leader>l(     :Tabularize /(<CR>
+nmap <leader>l)     :Tabularize /)<CR>
+vmap <leader>l)     :Tabularize /)<CR>
+nmap <leader>l<Bar> :Tabularize /<Bar><CR>
+vmap <leader>l<Bar> :Tabularize /<Bar><CR>
 
 " ctrlp
 let g:ctrlp_cmd = 'CtrlPMixed'
