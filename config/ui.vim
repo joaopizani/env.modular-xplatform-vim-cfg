@@ -52,10 +52,12 @@ let g:neocomplcache_disable_auto_complete = 1
 let g:neocomplcache_temporary_dir = expand("$VIMROOT") . '/runtime/neocomplcache'
 
 " neosnippets
+set completeopt-=preview
 let g:extrasnips = expand("$VIMROOT") . '/snippets'
 let g:neosnippet#snippets_directory = g:extrasnips . '/honza-snippets/snippets,' . g:extrasnips . '/custom'
 let g:neosnippet#enable_snipmate_compatibility = 1
-
+imap <C-y> <Plug>(neosnippet_expand_or_jump)
+smap <C-y> <Plug>(neosnippet_expand_or_jump)
 
 
 " general mappings
