@@ -116,7 +116,8 @@ nnoremap <A-Right> <C-w>>
 nnoremap ; :
 
 " Remapping the leader key
-let mapleader = ","
+nnoremap <space> <Nop>
+let mapleader = " "
 
 " Some nice general-purpose shortcuts using the leader
 " toggle search highlight
