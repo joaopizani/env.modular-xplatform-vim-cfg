@@ -13,7 +13,7 @@ if(s:neobundle_present)
     endif
 
     call neobundle#rc(expand('$VIMROOT/runtime/bundle/'))
-    source $VIMROOT/config/pluginlist.vim
+    source $VIMROOT/config/plugin-dependent/pluginlist.vim
     filetype plugin indent on
 
     if !has('vim_starting')
@@ -22,8 +22,8 @@ if(s:neobundle_present)
 
 
     " Include configurations organized in subject-segregated modules
-    source $VIMROOT/config/ui.vim  " user-interface stuff
-    source $VIMROOT/config/tags.vim  " tags and stuff
-    source $VIMROOT/config/latex.vim  " configurations for LaTeX-Vim
+    source $VIMROOT/config/plugin-dependent/ui.vim  " user-interface stuff
+    source $VIMROOT/config/plugin-dependent/tags.vim  " tags and stuff
+    source $VIMROOT/config/plugin-dependent/latex.vim  " configurations for LaTeX-Vim
 endif
 
