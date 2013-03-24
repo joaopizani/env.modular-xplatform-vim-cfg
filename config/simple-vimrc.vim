@@ -165,7 +165,7 @@ au BufWinEnter *.* silent! loadview  " make vim load view (state) (folds, cursor
 
 function! InitializeDirectories()
     let separator = "."
-    let parent = expand("$VIMROOT")
+    let parent = expand("$VIM_ROOT")
     let prefix = "runtime"
     let dir_list = {'backup': 'backupdir',   'views': 'viewdir',   'swap': 'directory'}
     if has('persistent_undo')

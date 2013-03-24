@@ -1,19 +1,22 @@
+let $VIM_CONFIG = expand("$VIM_ROOT") . '/config'
+let $VIM_RUNTIME = expand("$VIM_ROOT") . '/runtime'
+
 " simple part - can be used with no vundle packages installed
-source $VIMROOT/config/simple-vimrc.vim
+source $VIM_CONFIG/simple-vimrc.vim
 
 
 " detects whether the neobundle plugin manager is present.
-let s:neobundle_present = filereadable(expand("$VIMROOT") . "/runtime/bundle/neobundle.vim/README.md")
+let s:neobundle_present = filereadable(expand("$VIM_RUNTIME") . "/bundle/neobundle.vim/README.md")
 
 if(s:neobundle_present)
     let g:neobundle#types#git#default_protocol = 'https'
 
     if has('vim_starting')
-        set rtp+=$VIMROOT/runtime/bundle/neobundle.vim/
+        set rtp+=$VIM_RUNTIME/bundle/neobundle.vim/
     endif
 
-    call neobundle#rc(expand('$VIMROOT/runtime/bundle/'))
-    source $VIMROOT/config/plugin-dependent/pluginlist.vim
+    call neobundle#rc(expand('$VIM_RUNTIME/bundle/'))
+    source $VIM_CONFIG/plugin-dependent/pluginlist.vim
     filetype plugin indent on
 
     if !has('vim_starting')
@@ -21,9 +24,9 @@ if(s:neobundle_present)
     endif
 
 
-    " Include configurations organized in subject-segregated modules
-    source $VIMROOT/config/plugin-dependent/ui.vim  " user-interface stuff
-    source $VIMROOT/config/plugin-dependent/tags.vim  " tags and stuff
-    source $VIMROOT/config/plugin-dependent/latex.vim  " configurations for LaTeX-Vim
+    " Source plugin-dependent configs organized in subject-segregated modules
+    for f in split(glob(expand("$VIM_CONFIG") . '/plugin-dependent/*.vim'), '\n')
+        exe 'source' f
+    endfor
 endif
 

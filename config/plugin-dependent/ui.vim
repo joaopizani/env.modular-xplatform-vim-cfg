@@ -5,19 +5,23 @@ else
     colorscheme zenburn
 endif
 
+
 " NERDTree
 let NERDTreeChDirMode = 2
 let NERDChristmasTree = 1
 let NERDTreeShowBookmarks = 1
 let NERDTreeWinSize = 26
-let NERDTreeBookmarksFile = expand("$VIMROOT") . '/runtime/NERDTreeBookmarks'
+let NERDTreeBookmarksFile = expand("$VIM_RUNTIME") . '/NERDTreeBookmarks'
+
 
 " tagbar
 let g:tagbar_width=30
 
+
 " powerline statusbar
 let laststatus=2
 let g:Powerline_symbols='unicode'
+
 
 " tabular alignment mappings
 nmap <leader>l=     :Tabularize /=<CR>
@@ -31,11 +35,12 @@ vmap <leader>l)     :Tabularize /)<CR>
 nmap <leader>l<Bar> :Tabularize /<Bar><CR>
 vmap <leader>l<Bar> :Tabularize /<Bar><CR>
 
+
 " ctrlp
 let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_switch_buffer = 'E'
-let g:ctrlp_cache_dir = expand("$VIMROOT") . '/runtime/ctrlp/cache'
+let g:ctrlp_cache_dir = expand("$VIM_RUNTIME") . '/ctrlp/cache'
 if has("win32")
     let g:ctrlp_mruf_case_sensitive = 0
 else
@@ -46,14 +51,16 @@ let g:ctrlp_custom_ignore = {
     \ 'file': '\v\.(exe|so|dll|o|swp|pyc|wav|mp3|ogg|pdf|hi)$',
     \ }
 
+
 " NeoComplCache
 let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_disable_auto_complete = 1
-let g:neocomplcache_temporary_dir = expand("$VIMROOT") . '/runtime/neocomplcache'
+let g:neocomplcache_temporary_dir = expand("$VIM_RUNTIME") . '/neocomplcache'
+
 
 " neosnippets
-set completeopt-=preview
-let g:extrasnips = expand("$VIMROOT") . '/snippets'
+set completeopt-=preview  " disbales the annoying and non-self closing preview
+let g:extrasnips = expand("$VIM_ROOT") . '/snippets'
 let g:neosnippet#snippets_directory = g:extrasnips . '/honza-snippets/snippets,' . g:extrasnips . '/custom'
 let g:neosnippet#enable_snipmate_compatibility = 1
 imap <C-y> <Plug>(neosnippet_expand_or_jump)
