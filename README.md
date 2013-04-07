@@ -34,13 +34,13 @@ ln -s ${REPO}/_vimrc  ~/_vimrc
 
 Optional but recommended: enabling the set of recommended plugins
 -----------------------------------------------------------------
- 1. Go into `$REPO` and run `git submodule update --init`. Congratz! You just enabled
+ 1. Go into `$REPO` and run `git submodule update --init --recursive`. Congratz! You just enabled
     [NeoBundle](https://github.com/Shougo/neobundle.vim) (a very nice® Vim plugin manager for Vim).
 
- 2. Obtain the set of plugins by running `vim +NeoBundleInstall +qall`
+ 2. Obtain the latest version of the plugins by running `vim +NeoBundleInstall +qall`
 
  3. DONE. COMPLETELY DONE. Whenever you want to update the plugins, you can do it **inside**
-    Vim by running the command `NeoBundleUpdate`
+    Vim by running the command `:NeoBundleUpdate`
 
 
 
@@ -58,15 +58,16 @@ You can of course edit the file to your liking, but the default mappings are:
  * **F8:** Saves changes to all open buffers (:wa).
  * **F9:** Builds the "project" (issues the "make!" command), **without** jumping to the first error.
 
-**Important:** All abovementioned mappings also work in insert mode.
+**Important:** All abovementioned mappings also work in insert mode. The leader is by default mapped
+to SPACE.
 
  * **Ctrl+p:** Opens a prompt for easy most-recently-used and intelligent (fuzzy) file and buffer search
 
- * **,pp:** Toggles PASTE mode. PASTE mode is useful for when you want to paste formatted text into vim (for
+ * **\<leader\>pp:** Toggles PASTE mode. PASTE mode is useful for when you want to paste formatted text into vim (for
    example, from the web), and don't want vim to mess with it by trying to autoindent or autoformat it.
- * **,hl:** Toggles search highlighting. After doing a search, it can be useful to have all the results
+ * **\<leader\>hl:** Toggles search highlighting. After doing a search, it can be useful to have all the results
    highlighted, but if you want to toggle this setting, use this short mapping :)
- * **,nn:** Toggles line numbers in the current buffer
+ * **\<leader\>nn:** Toggles line numbers in the current buffer
 
 ### Moving between split windows, resizing and maximizing/restoring them ###
 When using Vim for programming, you often end up using a lot of open buffers, shown in split windows spread
@@ -83,7 +84,7 @@ across your screen. Thus, we added easy mappings to facilitate moving between an
    **down** (increase height), and if you are in the rightmost window and press Alt+Right, the window will
    go **left** (increase width).
  * **F3:** By pressing this, you will maximize the current split window to occupy the whole screen. By
-   pressing the same combination again, the previous split configuration is _completely_ restored.
+   pressing the same shortcut again, the previous (pre-maximization) layout is _completely_ restored.
 
 ### Miscellaneous nice stuff going on under the covers ###
 Some nice settings and plugins are in place which make (at least I think) any programmer's life easier while
@@ -96,12 +97,12 @@ niceties follows:
 
  * **Easy and organized plugin management:** Our setup uses [NeoBundle](https://github.com/Shougo/neobundle.vim),
    the *Mother of All Plugins* for Vim. NeoBundle is like a package manager for Vim plugins. You have a list of your
-   installed plugins under `modular-xplatform-vim-cfg/config/vimrc.vim`; you can install and/or update plugins
-   by using the command `:NeoBundleUpdate` and uninstall by using `NeoBundleClean`. All plugins are kept under a
-   single directory, with one plugin per subdirectory.
+   installed plugins under `modular-xplatform-vim-cfg/config/plugin-dependent/pluginlist.vim`;
+   you can install and/or update plugins by using the command `:NeoBundleUpdate` and uninstall by
+   using `:NeoBundleClean`. All plugins are kept under a single directory, with one plugin per subdirectory.
 
  * **Code snippets:** Includes the awesome [neosnippet](https://github.com/Shougo/neosnippet) plugin, which
-   allows you to insert short snippets of code by using "trigger" keywords and the `<Ctrl-K>` key. It's too
+   allows you to insert short snippets of code by using "trigger" keywords and the `<Ctrl-y>` key. It's too
    awesome too describe with words: go see the [screencast](http://www.youtube.com/watch?v=TNMjbaimk9g).
    Our setup includes a directory for custom snippets: there are already some there and you can add your own.
    For example: when you type `author<Ctrl-k>`, a nice header containing the file author's name and a
