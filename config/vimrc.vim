@@ -24,8 +24,8 @@ if(s:neobundle_present)
     endif
 
 
-    " Source plugin-dependent configs organized in subject-segregated modules
-    for f in split(glob(expand("$VIM_CONFIG") . '/plugin-dependent/*.vim'), '\n')
+    " Source plugin-dependent cfgs organized in modules, careful not to load the plugin-list again
+    for f in split(glob(expand("$VIM_CONFIG") . '/plugin-dependent/c*.vim'), '\n')
         exe 'source' f
     endfor
 endif
