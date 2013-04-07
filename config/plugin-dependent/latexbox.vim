@@ -8,3 +8,4 @@ let g:LatexBox_show_warnings = 0
 
 let g:LatexBox_split_width = 26
 let g:LatexBox_split_side = 'rightbelow'
+
