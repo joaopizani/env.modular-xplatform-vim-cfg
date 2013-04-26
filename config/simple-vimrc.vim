@@ -4,6 +4,9 @@
 " Mostly UI tweaks, mappings and segregation of backup files.
 " Some mappings trigger plugin actions, but if the plugins are not installed
 " you can just avoid using these (few) mappings.
+
+let $VIM_AUXDIR = expand("$VIM_ROOT") . '/runtime/aux'
+
 set nocompatible
 filetype plugin indent on
 
@@ -164,16 +167,14 @@ au BufWinLeave *.* silent! mkview    " make vim save view (state) (folds, cursor
 au BufWinEnter *.* silent! loadview  " make vim load view (state) (folds, cursor, etc)
 
 function! InitializeDirectories()
-    let separator = "."
-    let parent = expand("$VIM_ROOT")
-    let prefix = "runtime"
+    let parent = expand("$VIM_AUXDIR")
     let dir_list = {'backup': 'backupdir',   'views': 'viewdir',   'swap': 'directory'}
     if has('persistent_undo')
         let dir_list['undo'] = 'undodir'
     endif
 
     for [dirname, settingname] in items(dir_list)
-        let directory = parent . '/' . prefix . '/' . dirname . "/"
+        let directory = parent . '/' . dirname . "/"
         if exists("*mkdir")
             if !isdirectory(directory)
                 call mkdir(directory)
