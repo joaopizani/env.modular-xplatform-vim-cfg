@@ -1,4 +1,4 @@
-let $VIM_TAGS = expand("$VIM_RUNTIME") . '/tags'
+let $VIM_TAGS = expand("$VIM_CACHES") . '/tags'
 
 
 if has("win32")

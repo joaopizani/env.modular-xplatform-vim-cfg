@@ -3,7 +3,7 @@ let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_switch_buffer = 'E'
 
-let g:ctrlp_cache_dir = expand("$VIM_RUNTIME") . '/ctrlp/cache'
+let g:ctrlp_cache_dir = expand("$VIM_CACHES") . '/ctrlp/cache'
 
 if has("win32")
     let g:ctrlp_mruf_case_sensitive = 0
