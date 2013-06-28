@@ -24,6 +24,7 @@ NeoBundle "LaTeX-Box-Team/LaTeX-Box"
 
 " plugins for programming (language-independent)
 NeoBundle 'majutsushi/tagbar'
+NeoBundle 'xolox/vim-misc'
 NeoBundle 'xolox/vim-easytags'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'skwp/vim-easymotion'
