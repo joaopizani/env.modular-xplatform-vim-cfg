@@ -30,3 +30,7 @@ NeoBundle 'skwp/vim-easymotion'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
 
+" Coq
+NeoBundle 'def-lkb/vimbufsync'
+NeoBundle 'trefis/coquille'
+
