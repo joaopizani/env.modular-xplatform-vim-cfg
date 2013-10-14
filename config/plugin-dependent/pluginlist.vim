@@ -27,11 +27,11 @@ NeoBundle 'majutsushi/tagbar'
 NeoBundle 'xolox/vim-misc'
 NeoBundle 'xolox/vim-easytags'
 NeoBundle 'scrooloose/nerdcommenter'
-NeoBundle 'skwp/vim-easymotion'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
 
 " Coq
 NeoBundle 'def-lkb/vimbufsync'
 NeoBundle 'trefis/coquille'
+
 
