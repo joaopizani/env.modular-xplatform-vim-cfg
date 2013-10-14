@@ -18,6 +18,7 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'szw/vim-maximizer'
 NeoBundle 'godlygeek/tabular'
+NeoBundle 'lyokha/vim-xkbswitch'
 
 " plugins for programming (language-independent)
 NeoBundle 'majutsushi/tagbar'
