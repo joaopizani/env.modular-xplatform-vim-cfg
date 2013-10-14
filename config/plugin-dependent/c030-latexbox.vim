@@ -1,7 +1,8 @@
 " LaTeX-related options
 
-" Lauches the viewer when compiling the TeX doc and keeps monitoring the doc
-let g:LatexBox_latexmk_options = '-quiet -pdf -pvc -f'
+" uses asnchronous compilation, quiet and to PDF
+let g:LatexBox_latexmk_async = 1
+let g:LatexBox_latexmk_options = '-quiet -pdf -f'
 
 " Do not show warnings in the Quickfix window
 let g:LatexBox_show_warnings = 0
