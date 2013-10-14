@@ -19,9 +19,6 @@ NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'szw/vim-maximizer'
 NeoBundle 'godlygeek/tabular'
 
-" LaTeX
-NeoBundle "LaTeX-Box-Team/LaTeX-Box"
-
 " plugins for programming (language-independent)
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'xolox/vim-misc'
@@ -30,8 +27,9 @@ NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
 
-" Coq
-NeoBundle 'def-lkb/vimbufsync'
-NeoBundle 'trefis/coquille'
+" LaTeX
+NeoBundle "LaTeX-Box-Team/LaTeX-Box"
 
+
+source $VIM_CONFIG/plugin-dependent/pluginscoq.vim
 
