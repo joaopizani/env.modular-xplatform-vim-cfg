@@ -22,7 +22,7 @@ autocmd FileType make setlocal noexpandtab  " no fake tabs in makefiles
 
 " navigation
 set wildmenu
-set wildmode=list:longest,full  " command <Tab> completion, list matches, then longest common, then all.
+set wildmode=list:longest,full  " command <Tab> completion, list matches, then longest common.
 set scrolljump=3                " lines to scroll when cursor leaves screen
 set scrolloff=1                 " minimum lines to keep above and below cursor
 set foldmethod=syntax
@@ -114,9 +114,6 @@ nnoremap <A-Up> <C-w>+
 nnoremap <A-Down> <C-w>-
 nnoremap <A-Left> <C-w><
 nnoremap <A-Right> <C-w>>
-
-" Making it so ; works like : for commands. Saves typing and eliminates :W style typos
-nnoremap ; :
 
 " Remapping the leader key
 nnoremap <space> <Nop>
