@@ -8,8 +8,8 @@ function! CoquilleUserMapping()
     nnoremap <buffer> <silent> <C-e> :CoqToCursor<CR>
     inoremap <buffer> <silent> <C-e> <C-o>:CoqToCursor<CR>
 
-    nnoremap <buffer> <C-q> :Coq<Space>
-    inoremap <buffer> <C-q> <C-o>:Coq<Space>
+    nnoremap <buffer> <F9> :Coq<Space>
+    inoremap <buffer> <F9> <C-o>:Coq<Space>
 endfunction
 
 " Possibilities are those above + the standards: coquille#FNMapping and coquille#CoqideMapping
