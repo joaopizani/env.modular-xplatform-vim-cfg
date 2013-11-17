@@ -1,6 +1,6 @@
 function! CoquilleUserMapping()
-    nnoremap <buffer> <silent> <C-h> :CoqNext<CR>
-    inoremap <buffer> <silent> <C-h> <C-o>:CoqNext<CR>
+    nnoremap <buffer> <silent> <C-g> :CoqNext<CR>
+    inoremap <buffer> <silent> <C-g> <C-o>:CoqNext<CR>
 
     nnoremap <buffer> <silent> <C-y> :CoqUndo<CR>
     inoremap <buffer> <silent> <C-y> <C-o>:CoqUndo<CR>
