@@ -57,7 +57,7 @@ colorscheme torte " comes prebundled, is a nice default when plugins are off
 
 set textwidth=100
 set shortmess+=filmnrxoOtT  " abbrev. of messages (avoids 'hit enter')
-set viewoptions=folds,options,cursor,unix,slash  " better unix / windows compatibility
+set viewoptions=folds,cursor,unix,slash  " better unix / windows compatibility
 set virtualedit=onemore  " allow for cursor beyond last character
 set history=500  " Store a ton of history (default is 20)
 set cursorline  " highlight current line
