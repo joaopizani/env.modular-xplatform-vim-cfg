@@ -49,13 +49,11 @@ endif
 
 set t_Co=256
 if &term =~ '256color'
-    " Disable Background Color Erase so that color schemes work properly when Vim is
-    " inside tmux and GNU screen. See http://snk.tuxfamily.org/log/vim-256color-bce.html
+    " Disable BCE so that color schemes when Vim is inside tmux and GNU screen.
     set t_ut=
 endif
 colorscheme torte " comes prebundled, is a nice default when plugins are off
 
-set textwidth=100
 set shortmess+=filmnrxoOtT  " abbrev. of messages (avoids 'hit enter')
 set viewoptions=folds,cursor,unix,slash  " better unix / windows compatibility
 set virtualedit=onemore  " allow for cursor beyond last character
@@ -65,6 +63,31 @@ set laststatus=2  " always display the status line
 
 " for when syntax-specific indentation is off, this is a nice default
 set autoindent
+
+
+" column tolerance at 100. We can toggle between hard- and soft-wrapping, with soft being default.
+set colorcolumn=101
+
+set textwidth=0
+set formatoptions=""
+set wrap linebreak nolist
+
+let g:hard_wrap = 0
+function! s:WrapToggle()
+    if g:hard_wrap
+        let g:hard_wrap = 0
+        set textwidth=0
+        set formatoptions=""
+        echo "SOFT WRAPPING"
+    else
+        let g:hard_wrap = 1
+        set textwidth=100
+        set formatoptions=tanw
+        echo "HARD WRAPPING"
+    endif
+endfunction
+command! ToggleWrap call <SID>WrapToggle()
+
 
 
 " command to toggle quickfix window (home-made solution, simple and short)
@@ -79,6 +102,7 @@ function! s:QuickfixToggle()
     copen
 endfunction
 command! ToggleQuickfix call <SID>QuickfixToggle()
+
 
 
 " mappings
@@ -136,10 +160,11 @@ nnoremap <silent> <Leader>pp :set paste!<CR>
 " toggle line numbers
 nnoremap <silent> <Leader>nn :set number!<CR>
 
+" toggle between hard and soft wrapping
+nnoremap <Leader>hh :ToggleWrap<CR>
 
-" shortcut for activating user-defined completion both in Vim and GVim. Main use is with
-" Neocomplcache, but per se, this binding is plugin-independent.
-imap <C-Space> <C-x><C-u>
+" shortcut for activating omni completion both in Vim and GVim.
+imap <C-Space> <C-x><C-o>
 imap <C-@> <C-Space>
 
 
