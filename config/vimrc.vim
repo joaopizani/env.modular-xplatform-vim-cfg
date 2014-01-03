@@ -4,10 +4,8 @@ let $VIM_RUNTIME = expand("$VIM_ROOT") . '/runtime'
 let $VIM_BUNDLES = expand("$VIM_RUNTIME") . '/bundle'
 let $VIM_CACHES = expand("$VIM_RUNTIME") . '/caches'
 
-
 " simple part - can be used with no extra plugins installed
 source $VIM_CONFIG/simple-vimrc.vim
-
 
 " detects whether the neobundle plugin manager is present and loads plugins
 let s:neobundle_present = filereadable(expand("$VIM_BUNDLES") . "/neobundle.vim/README.md")

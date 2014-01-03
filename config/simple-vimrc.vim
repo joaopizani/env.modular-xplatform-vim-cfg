@@ -11,6 +11,7 @@ set nocompatible
 filetype plugin indent on
 
 
+
 " tabs
 set tabstop=4
 set shiftwidth=4
@@ -18,7 +19,6 @@ set expandtab
 set softtabstop=4  " Backspace goes back 4 spaces
 set backspace=indent,eol,start
 autocmd FileType make setlocal noexpandtab  " no fake tabs in makefiles
-
 
 " navigation
 set wildmenu
@@ -33,8 +33,7 @@ set listchars=tab:,.,trail:.,extends:#,nbsp:. " Highlight problematic whitespace
 nnoremap j gj
 nnoremap k gk
 
-
-" UI
+" GUI
 if has("gui_running")
     set lines=45
     set columns=135
@@ -48,8 +47,7 @@ if has("gui_running")
 endif
 
 set t_Co=256
-if &term =~ '256color'
-    " Disable BCE so that color schemes when Vim is inside tmux and GNU screen.
+if &term =~ '256color'  " Disable BCE so that colors work when Vim is inside tmux and GNU screen.
     set t_ut=
 endif
 colorscheme torte " comes prebundled, is a nice default when plugins are off
@@ -64,13 +62,14 @@ set laststatus=2  " always display the status line
 " for when syntax-specific indentation is off, this is a nice default
 set autoindent
 
-
-" column tolerance at 100. We can toggle between hard- and soft-wrapping, with soft being default.
-set colorcolumn=101
-
+set colorcolumn=101  " column tolerance at 100. We can toggle between hard- and soft-wrapping.
 set textwidth=0
 set formatoptions=""
 set wrap linebreak nolist
+set showbreak=⋯  " unicode ellipsis to show that a line is wrapped
+if exists('+breakindent')
+    set breakindent
+endif
 
 let g:hard_wrap = 0
 function! s:WrapToggle()
@@ -127,13 +126,12 @@ nmap <silent> <F9> :make!<CR>
 imap <silent> <F9> <ESC>:make!<CR>i
 
 
-" Easier moving in windows
+" Easier moving in windows and resizing windows
 noremap <C-j> <C-W>j
 noremap <C-k> <C-W>k
 noremap <C-l> <C-W>l
 noremap <C-h> <C-W>h
 
-" Easier resizing windows
 if match($TERM, "screen") != -1
     nnoremap [1;3A  <C-w>+
     nnoremap [1;3B  <C-w>-
@@ -146,11 +144,11 @@ else
     nnoremap <A-Right> <C-w>>
 endif
 
+
 " Remapping the leader key
 nnoremap <space> <Nop>
 let mapleader = " "
 
-" Some nice general-purpose shortcuts using the leader
 " toggle search highlight
 nnoremap <silent> <Leader>sh :set hlsearch!<CR>
 
@@ -163,9 +161,11 @@ nnoremap <silent> <Leader>nn :set number!<CR>
 " toggle between hard and soft wrapping
 nnoremap <Leader>hh :ToggleWrap<CR>
 
+
 " shortcut for activating omni completion both in Vim and GVim.
 imap <C-Space> <C-x><C-o>
 imap <C-@> <C-Space>
+
 
 
 " set makeprg so that when you activate :make, then make -j<N+1> is run, where N is
