@@ -1,4 +1,5 @@
 NeoBundleFetch 'Shougo/neobundle.vim'
+
 NeoBundle 'Shougo/vimproc', {
 \    'build': {
 \        'windows': 'make -f make_mingw32.mak',
@@ -10,14 +11,13 @@ NeoBundle 'Shougo/vimproc', {
 
 " general-purpose plugins
 NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'jnurmine/Zenburn'
 NeoBundle 'mbbill/undotree'
-NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'szw/vim-maximizer'
 NeoBundle 'godlygeek/tabular'
+NeoBundle 'vim-pandoc/vim-pandoc'
 
 " plugins for programming (language-independent)
 NeoBundle 'majutsushi/tagbar'
@@ -29,7 +29,3 @@ NeoBundle 'Shougo/neosnippet'
 
 " LaTeX
 NeoBundle "LaTeX-Box-Team/LaTeX-Box"
-
-
-source $VIM_CONFIG/plugin-dependent/pluginscoq.vim
-
