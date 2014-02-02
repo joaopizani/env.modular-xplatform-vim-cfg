@@ -33,6 +33,10 @@ set listchars=tab:,.,trail:.,extends:#,nbsp:. " Highlight problematic whitespace
 nnoremap j gj
 nnoremap k gk
 
+" Carriage-return works as insert-newline but without entering insert mode
+nnoremap <CR> o<Esc>
+
+
 " GUI
 if has("gui_running")
     set lines=45
@@ -160,6 +164,9 @@ nnoremap <silent> <Leader>nn :set number!<CR>
 
 " toggle between hard and soft wrapping
 nnoremap <Leader>hh :ToggleWrap<CR>
+
+" remove trailing whitespace from file
+nnoremap <silent> <Leader>rt :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>:set hlsearch<CR>
 
 
 " shortcut for activating omni completion both in Vim and GVim.
