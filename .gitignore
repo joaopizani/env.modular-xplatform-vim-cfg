@@ -1,3 +1,7 @@
 /runtime/**
-!/runtime/bundle/neobundle.vim/.dummy
+!/runtime/bundle/.dummy
 !/runtime/caches/tags/.dummy
+!/runtime/aux/swap/.dummy
+!/runtime/aux/backup/.dummy
+!/runtime/aux/views/.dummy
+!/runtime/aux/undo/.dummy
