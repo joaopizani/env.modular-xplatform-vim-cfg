@@ -9,9 +9,10 @@ After much googling and some head-banging I could achieve portability,
 and this VIM setup should work in your machine by just following the simple installation instructions :)
 
 
-Basic installation steps
-------------------------
-### First step - Clone ###
+Installation steps
+------------------
+
+### First step - Clone
  * Clone this repo to a directory of your preference, let's call this $REPO from now on:
 
 ```bash
@@ -20,7 +21,7 @@ REPO=~/modvim; git clone http://github.com/joaopizani/modular-xplatform-vim-cfg.
 
 ### Second step - Link (OS-Specific) ###
 
- * **Linux, BSD, Mac OS X:** Create a link called "\_vimrc" in your home directory pointing to the cloned repo:
+ * **Linux, BSD, Mac OS X:** Create a link called `\_vimrc` in your home directory pointing to the cloned repo:
 
 ```bash
 ln -s ${REPO}/_vimrc  ~/_vimrc
@@ -28,8 +29,9 @@ ln -s ${REPO}/_vimrc  ~/_vimrc
 
  * **Windows:** Go into `${REPO}/win` and execute (double-click) the file named `install-vimrc-link.bat`
 
-Optional but recommended: enabling the set of recommended plugins
------------------------------------------------------------------
+
+### Optional but recommended: enabling the set of recommended plugins
+
  1. Go into `$REPO` and run `git submodule update --init --recursive`.
     Congratz! You just enabled [NeoBundle](https://github.com/Shougo/neobundle.vim) (a very nice® Vim plugin manager for Vim).
 
@@ -42,7 +44,9 @@ Optional but recommended: enabling the set of recommended plugins
 
 Some basic usage instructions
 -----------------------------
-### VERY FREQUENTLY used keymappings ###
+
+### VERY FREQUENTLY used keymappings
+
 The file `${REPO}/config/simple-vimrc.vim` contains, among other niceties, some convenient keymappings for frequent tasks when developing using Vim (at least I find them convenient).
 You can of course edit the file to your liking, but the default mappings are:
 
@@ -52,38 +56,46 @@ You can of course edit the file to your liking, but the default mappings are:
  * **F6:** Toggles the *Quickfix* window, i.e, opens it if it's closed and closes it if already open.
  * **F7:** Goes to the next *Quickfix* error (:cn).
  * **F8:** Saves changes to all open buffers (:wa).
- * **F9:** Builds the "project" (issues the "make!" command), **without** jumping to the first error.
+ * **F9:** Build action (issues the "make!" command), **without** jumping to the first error.
 
-**Important:** All abovementioned mappings also work in insert mode. The leader is by default mapped to SPACE.
+**Obs 1:** All abovementioned mappings also work in insert mode.
+
+**Obs 2:** The \<Leader\> key has been mapped to SPACE
 
  * **Ctrl+p:** Opens a prompt for easy most-recently-used and intelligent (fuzzy) file and buffer search
 
- * **\<leader\>pp:** Toggles PASTE mode.
+ * **\<Leader\>pp:** Toggles PASTE mode.
    PASTE mode is useful for when you want to paste formatted text into vim (for example, from the web),
    and don't want vim to mess with it by trying to autoindent or autoformat it.
 
- * **\<leader\>sh:** Toggles search highlighting. After doing a search, it can be useful to have all the results highlighted,
+ * **\<Leader\>sh:** Toggles search highlighting. After doing a search, it can be useful to have all the results highlighted,
    but if you want to toggle this setting, use this short mapping :)
 
- * **\<leader\>nn:** Toggles line numbers in the current buffer
+ * **\<Leader\>nn:** Toggles line numbers in the current buffer
 
- * **\<leader\>hh:** Toggles soft/hard line wrapping, with soft being the default.
+ * **\<Leader\>hh:** Toggles soft/hard line wrapping, with soft being the default.
 
-### Moving between split windows, resizing and maximizing/restoring them ###
+ * **\<Leader\>rt:** Removes trailing whitespace from the whole current buffer.
+
+### Moving between split windows, resizing and maximizing/restoring them
+
 When using Vim for programming, you often end up using a lot of open buffers, shown in split windows spread across your screen.
 Thus, we added easy mappings to facilitate moving between and resizing split windows:
 
 **Important:** These bindings will only work in normal mode.
 
  * **Ctrl+{j,k,h,l}:** Goes, respectively, to the window above, below, to the left and to the right of the current one.
+
  * **Alt+{ArrowUp,ArrowDown,ArrowLeft,ArrowRight}:** By pressing Alt in combination with the arrow keys, you are able to resize the current window.
    The *Up* and *Down* arrows will, respectively, increase and decrease the window *height*; while *Right* and *Left* will increase and decrease *width*.
    This can be **non-intuitive**, however: When you are in the topmost window and press Alt+Up, the window will go **down** (increase height),
    and if you are in the rightmost window and press Alt+Right, the window will go **left** (increase width).
+
  * **F3:** By pressing this, you will maximize the current split window to occupy the whole screen.
    By pressing the same shortcut again, the previous (pre-maximization) layout is _completely_ restored.
 
-### Miscellaneous nice stuff going on under the covers ###
+### Miscellaneous nice stuff going on under the covers
+
 Some nice settings and plugins are in place which make (at least I think) any programmer's life easier while using Vim,
 and require no intervention from the user (they just work® by default).
 A random selection of such niceties follows:
