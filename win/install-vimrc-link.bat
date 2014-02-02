@@ -18,7 +18,7 @@ echo source $VIMROOT\config\vimrc.vim >> _vimrc
 
 
 move _vimrc "%USERPROFILE%\_vimrc"
-copy ..\ctags.conf "%USERPROFILE%\ctags.cnf"
+copy ctags.conf "%USERPROFILE%\ctags.cnf"
 
 
 echo Job DONE. Now you can just launch VIM normally :)
