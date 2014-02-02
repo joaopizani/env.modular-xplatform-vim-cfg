@@ -5,3 +5,5 @@
 !/runtime/aux/backup/.dummy
 !/runtime/aux/views/.dummy
 !/runtime/aux/undo/.dummy
+/config/extra/**
+!/config/extra/.dummy
