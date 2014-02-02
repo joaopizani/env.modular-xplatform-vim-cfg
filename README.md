@@ -16,12 +16,12 @@ Installation steps
  * Clone this repo to a directory of your preference, let's call this $REPO from now on:
 
 ```bash
-REPO=~/modvim; git clone http://github.com/joaopizani/modular-xplatform-vim-cfg.git $REPO
+REPO=~/modvim; git clone http://github.com/joaopizani/env.modular-xplatform-vim-cfg.git $REPO
 ```
 
 ### Second step - Link (OS-Specific) ###
 
- * **Linux, BSD, Mac OS X:** Create a link called `\_vimrc` in your home directory pointing to the cloned repo:
+ * **Linux, BSD, Mac OS X:** Create a link called `_vimrc` in your home directory pointing to the cloned repo:
 
 ```bash
 ln -s ${REPO}/_vimrc  ~/_vimrc
@@ -30,7 +30,7 @@ ln -s ${REPO}/_vimrc  ~/_vimrc
  * **Windows:** Go into `${REPO}/win` and execute (double-click) the file named `install-vimrc-link.bat`
 
 
-### Optional but recommended: enabling the set of recommended plugins
+### Optional but recommended: enabling recommended plugins
 
  1. Go into `$REPO` and run `git submodule update --init --recursive`.
     Congratz! You just enabled [NeoBundle](https://github.com/Shougo/neobundle.vim) (a very nice® Vim plugin manager for Vim).
@@ -101,13 +101,13 @@ and require no intervention from the user (they just work® by default).
 A random selection of such niceties follows:
 
  * **Segregated Vim metafiles:** Vim has the bad habit of polluting the user's working directory with backup files (myfile~),
-   swap files (.myfile.swp), undo files, etc. My config segregates all these files into central directories: `${REPO}/runtime/{backup,swap,undo,views}`.
+   swap files (.myfile.swp), undo files, etc. My config segregates all these files into central directories: `${REPO}/runtime/aux/{backup,swap,undo,views}`.
 
  * **Easy and organized plugin management:** Our setup uses [NeoBundle](https://github.com/Shougo/neobundle.vim), the *Mother of All Plugins* for Vim.
    NeoBundle is like a package manager for Vim plugins.
-   You have a list of your installed plugins under `modular-xplatform-vim-cfg/config/plugin-dependent/pluginlist.vim`;
+   You have lists of your installed plugins under `${REPO}/config/recommended/plugin-lists/*.vim`;
    you can install and/or update plugins by using the command `:NeoBundleUpdate` and uninstall by using `:NeoBundleClean`.
-   All plugins are kept under a single directory, with one plugin per subdirectory.
+   All plugin installations are kept under a single directory, with one plugin per subdirectory.
 
  * **Code snippets:** Includes the awesome [neosnippet](https://github.com/Shougo/neosnippet) plugin,
    which allows you to insert short snippets of code by using "trigger" keywords and the `<Ctrl-y>` key.
