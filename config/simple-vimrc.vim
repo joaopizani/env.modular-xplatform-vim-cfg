@@ -109,23 +109,23 @@ command! ToggleQuickfix call <SID>QuickfixToggle()
 " mappings
 " F-keys
 nnoremap <silent> <F4> :NERDTreeToggle<CR>
-inoremap <silent> <F4> <ESC>:NERDTreeToggle<CR>i
+inoremap <silent> <F4> <C-o>:NERDTreeToggle<CR>
 
 nnoremap <silent> <F5> :TagbarToggle<CR>
-inoremap <silent> <F5> <ESC>:TagbarToggle<CR>i
+inoremap <silent> <F5> <C-o>:TagbarToggle<CR>
 
 nnoremap <silent> <F6> :ToggleQuickfix<CR>
-inoremap <silent> <F6> <ESC>:ToggleQuickfix<CR>i
+inoremap <silent> <F6> <C-o>:ToggleQuickfix<CR>
 
 nnoremap <silent> <F7> :cn<CR>
-inoremap <silent> <F7> <ESC>:cn<CR>i
+inoremap <silent> <F7> <C-o>:cn<CR>
 
 nnoremap <silent> <F8> :wa<CR>
-inoremap <silent> <F8> <ESC>:wa<CR>i
+inoremap <silent> <F8> <C-o>:wa<CR>
 
 " compiling might be remapped by language-specific configs
 nmap <silent> <F9> :make!<CR>
-imap <silent> <F9> <ESC>:make!<CR>i
+imap <silent> <F9> <C-o>:make!<CR>
 
 
 " Easier moving in windows and resizing windows
