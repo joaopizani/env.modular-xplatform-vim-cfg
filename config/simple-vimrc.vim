@@ -33,8 +33,6 @@ set listchars=tab:,.,trail:.,extends:#,nbsp:. " Highlight problematic whitespace
 nnoremap j gj
 nnoremap k gk
 
-" Carriage-return works as insert-newline but without entering insert mode
-nnoremap <CR> o<Esc>
 
 
 " GUI
@@ -152,6 +150,7 @@ endif
 " Remapping the leader key
 nnoremap <space> <Nop>
 let mapleader = " "
+let maplocalleader = "\\"
 
 " toggle search highlight
 nnoremap <silent> <Leader>sh :set hlsearch!<CR>
