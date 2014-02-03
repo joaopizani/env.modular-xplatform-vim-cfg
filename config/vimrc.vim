@@ -1,6 +1,5 @@
 let $VIM_RUNTIME = expand("$VIM_ROOT") . '/runtime'
 let $VIM_BUNDLES = expand("$VIM_RUNTIME") . '/bundle'
-
 let $VIM_CONFIG = expand("$VIM_ROOT") . '/config'
 let $VIM_CFG_REC = expand("$VIM_CONFIG") . '/recommended'
 let $VIM_CFG_EXT = expand("$VIM_CONFIG") . '/extra'
@@ -9,7 +8,6 @@ let $VIM_CACHES = expand("$VIM_RUNTIME") . '/caches'
 
 
 " simple part - can be used with no extra plugins installed
-source $VIM_CONFIG/simple-vimrc.vim
 for f in glob(expand("$VIM_CFG_REC") . '/simple-cfgs/*.vim', 1, 1)  " list = 1
     exe 'source' f
 endfor
