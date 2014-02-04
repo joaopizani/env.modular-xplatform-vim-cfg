@@ -51,7 +51,7 @@ nnoremap <silent> <Leader>nn :set number!<CR>
 nnoremap <Leader>hh :ToggleWrap<CR>
 
 " remove trailing whitespace from file
-nnoremap <silent> <Leader>rt :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>:set hlsearch<CR>
+nnoremap <silent> <Leader>rt :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>:nohlsearch<CR>
 
 " shortcut for activating U completion both in Vim and GVim.
 imap <C-Space> <C-x><C-u>
