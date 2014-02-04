@@ -11,8 +11,8 @@ nnoremap <silent> <F8> :wa<CR>
 inoremap <silent> <F8> <C-o>:wa<CR>
 
 " compiling might be remapped by language-specific configs
-nmap <silent> <F9> :make!<CR>
-imap <silent> <F9> <C-o>:make!<CR>
+nmap <silent> <F9> :Silent make!<CR>
+imap <silent> <F9> <C-o>:Silent make!<CR>
 
 " Easier moving in windows and resizing windows
 noremap <C-j> <C-W>j
@@ -53,6 +53,11 @@ nnoremap <Leader>hh :ToggleWrap<CR>
 " remove trailing whitespace from file
 nnoremap <silent> <Leader>rt :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>:set hlsearch<CR>
 
-" shortcut for activating omni completion both in Vim and GVim.
-imap <C-Space> <C-x><C-o>
-imap <C-@> <C-Space>
+" shortcut for activating U completion both in Vim and GVim.
+imap <C-Space> <C-x><C-u>
+imap <Nul> <C-Space>
+
+" inserting newline after the cursor without entering insert mode (Gvim, Vim)
+nnoremap <C-CR> o<ESC>
+nnoremap <Nul> o<ESC>
+
