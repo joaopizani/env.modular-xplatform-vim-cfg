@@ -1,6 +1,0 @@
-[submodule "runtime/bundle/neobundle.vim"]
-	path = runtime/bundle/neobundle.vim
-	url = https://github.com/Shougo/neobundle.vim.git
-[submodule "snippets/honza-snippets"]
-	path = snippets/honza-snippets
-	url = https://github.com/honza/vim-snippets.git
