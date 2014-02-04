@@ -56,7 +56,7 @@ You can of course edit the file to your liking, but the default mappings are:
  * **F6:** Toggles the *Quickfix* window, i.e, opens it if it's closed and closes it if already open.
  * **F7:** Goes to the next *Quickfix* error (:cn).
  * **F8:** Saves changes to all open buffers (:wa).
- * **F9:** Build action (issues the "make!" command), **without** jumping to the first error.
+ * **F9:** Build action (issues the "make" command), **without** annoying "press Enter" prompts.
 
 **Obs 1:** All abovementioned mappings also work in insert mode.
 
