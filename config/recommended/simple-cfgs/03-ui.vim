@@ -25,3 +25,7 @@ set cursorline  " highlight current line
 set laststatus=2  " always display the status line
 
 set autoindent  " for when syntax-specific indentation is off
+
+command! -nargs=1 Silent
+\ | execute ':silent '.<q-args>
+\ | execute ':redraw!'
