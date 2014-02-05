@@ -1,6 +1,7 @@
 [submodule "runtime/bundle/neobundle.vim"]
 	path = runtime/bundle/neobundle.vim
 	url = https://github.com/Shougo/neobundle.vim
+    ignore = all
 [submodule "config/extra/10-haskell"]
 	path = config/extra/10-haskell
 	url = git@github.com:joaopizani/env.haskell-vim-cfgs.git
