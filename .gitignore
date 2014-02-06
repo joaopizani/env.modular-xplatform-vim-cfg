@@ -7,3 +7,5 @@
 !/runtime/aux/undo/.dummy
 /config/extra/**
 !/config/extra/.dummy
+!/config/extra/20-coq/
+!/config/extra/30-agda/
