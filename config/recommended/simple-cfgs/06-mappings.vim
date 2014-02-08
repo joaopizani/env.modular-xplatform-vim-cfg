@@ -20,17 +20,16 @@ noremap <C-k> <C-W>k
 noremap <C-l> <C-W>l
 noremap <C-h> <C-W>h
 
-if match($TERM, "screen") != -1
-    nnoremap [1;3A  <C-w>+
-    nnoremap [1;3B  <C-w>-
-    nnoremap [1;3D  <C-w><
-    nnoremap [1;3C  <C-w>>
-else
-    nnoremap <A-Up>    <C-w>+
-    nnoremap <A-Down>  <C-w>-
-    nnoremap <A-Left>  <C-w><
-    nnoremap <A-Right> <C-w>>
-endif
+nnoremap <A-Up>    <C-w>+
+nnoremap <A-Down>  <C-w>-
+nnoremap <A-Left>  <C-w><
+nnoremap <A-Right> <C-w>>
+
+" For inside GNU Screen
+nnoremap [1;3A  <C-w>+
+nnoremap [1;3B  <C-w>-
+nnoremap [1;3D  <C-w><
+nnoremap [1;3C  <C-w>>
 
 
 " Remapping the leader key
