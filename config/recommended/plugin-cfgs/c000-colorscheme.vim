@@ -1,6 +1,7 @@
-" color scheme
-if (has('win32') && !has('gui_running')) || !exists("g:neobundle#log_filename")
-    colorscheme torte
+if has('gui_running')
+    set background=light
+    colorscheme solarized
 else
     colorscheme zenburn
 endif
+

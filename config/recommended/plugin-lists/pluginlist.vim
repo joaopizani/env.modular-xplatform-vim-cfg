@@ -9,9 +9,12 @@ NeoBundle 'Shougo/vimproc', {
 \    },
 \}
 
+" colorschemes
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'jnurmine/Zenburn'
+
 " general-purpose plugins
 NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'jnurmine/Zenburn'
 NeoBundle 'mbbill/undotree'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'kien/ctrlp.vim'
