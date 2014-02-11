@@ -11,5 +11,5 @@ let g:LatexBox_split_width = 26
 let g:LatexBox_split_side = 'rightbelow'
 
 
-au BufNewFile,BufRead *.tex   nnoremap <silent> <F9>  :w<CR>:Latexmk<CR>
-au BufNewFile,BufRead *.tex   inoremap <silent> <F9>  <C-o>:w<CR><C-o>:Latexmk<CR>
+au BufNewFile,BufWinEnter *.tex   nmap <silent> <F9>  :w<CR>:Latexmk<CR>
+au BufNewFile,BufWinEnter *.tex   imap <silent> <F9>  <C-o>:w<CR><C-o>:Latexmk<CR>
