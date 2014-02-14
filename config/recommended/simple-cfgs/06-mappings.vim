@@ -13,8 +13,6 @@ inoremap <silent> <F8> <C-o>:w<CR>
 " compiling might be remapped by language-specific configs
 nmap <silent> <F9> :Silent make<CR>
 imap <silent> <F9> <C-o>:Silent make<CR>
-au BufWinLeave *    nmap <silent> <F9> :Silent make<CR>
-au BufWinLeave *    imap <silent> <F9> <C-o>:Silent make<CR>
 
 " Easier moving in windows and resizing windows
 noremap <C-j> <C-W>j
