@@ -11,5 +11,10 @@ let g:LatexBox_split_width = 26
 let g:LatexBox_split_side = 'rightbelow'
 
 
-au BufNewFile,BufRead,WinEnter *.tex   nmap <buffer> <silent> <F9>  :w<CR>:Latexmk<CR>
-au BufNewFile,BufRead,WinEnter *.tex   imap <buffer> <silent> <F9>  <C-o>:w<CR><C-o>:Latexmk<CR>
+function! s:auBindingsLatexBoxBuild()
+    nmap <buffer> <silent> <F9>  :w<CR>:Latexmk<CR>
+    imap <buffer> <silent> <F9>  <C-o>:w<CR><C-o>:Latexmk<CR>
+endfunction
+command! BindingsLatexBoxBuild call <SID>auBindingsLatexBoxBuild()
+
+au BufNewFile,BufRead,WinEnter *.tex   :BindingsLatexBoxBuild
