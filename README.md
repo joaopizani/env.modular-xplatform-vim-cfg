@@ -16,7 +16,7 @@ Installation steps
  * Clone this repo to a directory of your preference, let's call this $REPO from now on:
 
 ```bash
-REPO=~/modvim; git clone http://github.com/joaopizani/env.modular-xplatform-vim-cfg.git $REPO
+REPO="~/modvim"; git clone http://github.com/joaopizani/env.modular-xplatform-vim-cfg.git "$REPO"
 ```
 
 ### Second step - Link (OS-Specific) ###
@@ -24,7 +24,7 @@ REPO=~/modvim; git clone http://github.com/joaopizani/env.modular-xplatform-vim-
  * **Linux, BSD, Mac OS X:** Create a link called `_vimrc` in your home directory pointing to the cloned repo:
 
 ```bash
-ln -s ${REPO}/_vimrc  ~/_vimrc
+ln -s "${REPO}"/_vimrc  "${HOME}"/_vimrc
 ```
 
  * **Windows:** Go into `${REPO}/win` and execute (double-click) the file named `install-vimrc-link.bat`
