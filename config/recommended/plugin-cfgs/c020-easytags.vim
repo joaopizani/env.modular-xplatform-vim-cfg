@@ -17,6 +17,3 @@ let g:easytags_updatetime_min = 2000
 set updatetime=3000
 
 
-" keybinding to force tag update (just in case you dont want to wait some seconds)
-nnoremap <silent> <F12> :UpdateTags!<CR>
-
