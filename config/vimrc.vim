@@ -11,7 +11,7 @@ let $VIM_CACHES = expand("$VIM_RUNTIME") . '/caches'
 for f in glob(expand("$VIM_CFG_REC") . '/simple-cfgs/*.vim', 1, 1)  " list = 1
     exe 'source' f
 endfor
-for f in glob(expand("$VIM_CFG_EXT") . '/simple-cfgs/*.vim', 1, 1)  " list = 1
+for f in glob(expand("$VIM_CFG_EXT") . '/*/simple-cfgs/*.vim', 1, 1)  " list = 1
     exe 'source' f
 endfor
 
