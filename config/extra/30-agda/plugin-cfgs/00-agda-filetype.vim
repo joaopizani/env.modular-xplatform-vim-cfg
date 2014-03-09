@@ -4,5 +4,6 @@ function! s:auBindingsAgdaBuild()
 endfunction
 command! BindingsAgdaBuild call <SID>auBindingsAgdaBuild()
 
+
 au BufNewFile,BufRead,WinEnter *.agda,*.lagda  :BindingsAgdaBuild
 
