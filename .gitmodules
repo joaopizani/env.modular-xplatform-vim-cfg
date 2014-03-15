@@ -1,4 +1,0 @@
-[submodule "runtime/bundle/neobundle.vim"]
-	path = runtime/bundle/neobundle.vim
-	url = https://github.com/Shougo/neobundle.vim
-    ignore = all
