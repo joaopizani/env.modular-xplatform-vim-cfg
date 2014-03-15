@@ -1,1 +1,1 @@
-let g:agda_stdlibpath = '~/build/agda/lib/current/src'
+let g:agda_extraincpaths = ['/home/joaopizani/build/agda/lib/current/src']
