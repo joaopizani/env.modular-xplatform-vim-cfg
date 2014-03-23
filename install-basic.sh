@@ -5,7 +5,8 @@ FROMDIR="${PWD}"
 
 
 cd "${DIR}"
-git submodule update --init --recursive
+git submodule update --init --recursive --remote
+git submodule foreach -q --recursive 'branch="$(git config -f $toplevel/.gitmodules submodule.$name.branch)"; git checkout $branch'
 cd "${FROMDIR}"
 
 ln -s -f "${DIR}/_vimrc"  "${HOME}/_vimrc"
