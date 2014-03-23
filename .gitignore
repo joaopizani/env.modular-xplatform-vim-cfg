@@ -1,5 +1,6 @@
 /runtime/**
 !/runtime/bundle/.dummy
+!/runtime/bundle/neobundle.vim/**
 !/runtime/caches/tags/.dummy
 !/runtime/aux/swap/.dummy
 !/runtime/aux/backup/.dummy

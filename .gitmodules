@@ -1,6 +1,7 @@
-[submodule "neobundle-master"]
-	path = runtime/bundle/neobundle.vim
-	url = https://github.com/Shougo/neobundle.vim
 [submodule "haskell-vim-master"]
 	path = config/extra/10-haskell
 	url = git@github.com:joaopizani/env.haskell-vim-cfgs.git
+[submodule "neobundle-master"]
+	path = runtime/bundle/neobundle.vim
+	url = https://github.com/Shougo/neobundle.vim.git
+	branch = master
