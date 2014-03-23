@@ -1,6 +1,6 @@
 /runtime/**
 !/runtime/bundle/.dummy
-!/runtime/bundle/neobundle.vim/**
+!/runtime/bundle/neobundle.vim/
 !/runtime/caches/tags/.dummy
 !/runtime/aux/swap/.dummy
 !/runtime/aux/backup/.dummy
@@ -8,3 +8,6 @@
 !/runtime/aux/undo/.dummy
 /config/extra/**
 !/config/extra/.dummy
+!/config/extra/10-haskell/
+!/config/extra/20-coq/
+!/config/extra/30-agda/
