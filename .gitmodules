@@ -4,3 +4,4 @@
 [submodule "neobundle-master"]
 	path = runtime/bundle/neobundle.vim
 	url = https://github.com/Shougo/neobundle.vim.git
+	branch = master
