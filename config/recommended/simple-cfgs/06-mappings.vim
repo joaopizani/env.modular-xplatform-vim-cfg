@@ -25,7 +25,7 @@ nnoremap <A-Down>  <C-w>-
 nnoremap <A-Left>  <C-w><
 nnoremap <A-Right> <C-w>>
 
-" For inside GNU Screen
+" For inside GNU Screen and/or urxvt
 nnoremap [1;3A  <C-w>+
 nnoremap [1;3B  <C-w>-
 nnoremap [1;3D  <C-w><
