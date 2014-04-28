@@ -1,12 +1,13 @@
 if has("gui_running")
     set lines=45
     set columns=140
-    set guioptions-=T  "remove toolbar
-    set guioptions-=r  "remove right-hand scroll bar
+    set guioptions-=T  " remove toolbar
+    set guioptions-=r  " remove right-hand scroll bar
+    set guioptions-=m  " remove menu bar
     if has("win32")
         set guifont=Courier_New:h10:cANSI
     else
-        set guifont=Monospace\ 10
+        set guifont=DejaVu\ Sans\ Mono\ 10
     endif
 endif
 
