@@ -29,6 +29,7 @@ NeoBundle 'majutsushi/tagbar'
 NeoBundle 'xolox/vim-misc'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
+NeoBundle 'scrooloose/syntastic'
 
 " LaTeX
 NeoBundle "LaTeX-Box-Team/LaTeX-Box"
