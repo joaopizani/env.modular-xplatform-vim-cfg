@@ -21,6 +21,7 @@ NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'szw/vim-maximizer'
 NeoBundle 'godlygeek/tabular'
 NeoBundle 'vim-pandoc/vim-pandoc'
+NeoBundle 'tomtom/tcomment_vim'
 
 " plugins for programming (language-independent)
 NeoBundle 'majutsushi/tagbar'
