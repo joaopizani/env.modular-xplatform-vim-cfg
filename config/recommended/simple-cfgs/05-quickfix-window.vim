@@ -9,6 +9,3 @@ function! s:QuickfixToggle()
     copen
 endfunction
 command! ToggleQuickfix call <SID>QuickfixToggle()
-
-nnoremap <silent> <F6> :ToggleQuickfix<CR>
-inoremap <silent> <F6> <C-o>:ToggleQuickfix<CR>
