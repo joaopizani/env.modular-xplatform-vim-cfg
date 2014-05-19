@@ -1,8 +1,5 @@
-nnoremap <silent> <F4> :NERDTreeToggle<CR>
-inoremap <silent> <F4> <C-o>:NERDTreeToggle<CR>
-
-nnoremap <silent> <F5> :TagbarToggle<CR>
-inoremap <silent> <F5> <C-o>:TagbarToggle<CR>
+nnoremap <silent> <F6> :ToggleQuickfix<CR>
+inoremap <silent> <F6> <C-o>:ToggleQuickfix<CR>
 
 nnoremap <silent> <F7> :cn<CR>
 inoremap <silent> <F7> <C-o>:cn<CR>
@@ -10,9 +7,12 @@ inoremap <silent> <F7> <C-o>:cn<CR>
 nnoremap <silent> <F8> :w<CR>
 inoremap <silent> <F8> <C-o>:w<CR>
 
-" compiling might be remapped by language-specific configs
-nmap <silent> <F9> :Silent make<CR>
-imap <silent> <F9> <C-o>:Silent make<CR>
+nnoremap <silent> <F11> :wa<CR>
+nnoremap <silent> <F11> <C-o>:wa<CR>
+
+" remapped to SyntasticCheck if plugins present
+nmap <silent> <F12> :Silent make<CR>
+imap <silent> <F12> <C-o>:Silent make<CR>
 
 " Easier moving in windows and resizing windows
 noremap <C-j> <C-W>j
