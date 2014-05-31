@@ -11,8 +11,8 @@ nnoremap <silent> <F11> :wa<CR>
 nnoremap <silent> <F11> <C-o>:wa<CR>
 
 " remapped to SyntasticCheck if plugins present
-nmap <silent> <F12> :Silent make<CR>
-imap <silent> <F12> <C-o>:Silent make<CR>
+nmap <silent> <F12> :Silent make!<CR>
+imap <silent> <F12> <C-o>:Silent make!<CR>
 
 " Easier moving in windows and resizing windows
 noremap <C-j> <C-W>j
@@ -31,11 +31,13 @@ nnoremap [1;3B  <C-w>-
 nnoremap [1;3D  <C-w><
 nnoremap [1;3C  <C-w>>
 
-
 " Remapping the leader key
 nnoremap <space> <Nop>
 let mapleader = " "
 let maplocalleader = "\\"
+
+" make
+nnoremap <silent> <Leader>mm :Silent make!<CR>
 
 " toggle search highlight
 nnoremap <silent> <Leader>sh :set hlsearch!<CR>
