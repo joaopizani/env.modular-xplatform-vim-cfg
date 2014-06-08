@@ -30,6 +30,7 @@ NeoBundle 'xolox/vim-misc'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'jpalardy/vim-slime'
 
 " LaTeX
 NeoBundle "LaTeX-Box-Team/LaTeX-Box"
