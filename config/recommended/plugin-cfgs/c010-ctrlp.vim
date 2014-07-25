@@ -16,3 +16,10 @@ let g:ctrlp_custom_ignore = {
     \ 'file': '\v\.(exe|so|dll|o|swp|pyc|wav|mp3|ogg|pdf|hi)$\|\~$',
     \ }
 
+let g:ctrlp_user_command = {
+    \ 'types': {
+        \ 1: ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others'],
+        \ 2: ['.hg', 'hg --cwd %s locate -I .'],
+    \ },
+    \ 'fallback': 'find %s -type f'
+\ }
