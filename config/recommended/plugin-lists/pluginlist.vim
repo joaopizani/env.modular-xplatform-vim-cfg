@@ -25,6 +25,7 @@ NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'vim-pandoc/vim-pandoc'
 NeoBundle 'vim-pandoc/vim-pandoc-syntax'
+NeoBundle 'Shougo/neocomplete.vim'
 
 " plugins for programming (language-independent)
 NeoBundle 'majutsushi/tagbar'
