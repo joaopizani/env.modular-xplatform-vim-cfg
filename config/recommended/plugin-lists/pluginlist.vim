@@ -26,6 +26,9 @@ NeoBundle 'bling/vim-airline'
 NeoBundle 'vim-pandoc/vim-pandoc'
 NeoBundle 'vim-pandoc/vim-pandoc-syntax'
 NeoBundle 'Shougo/neocomplete.vim'
+NeoBundle 'Shougo/neosnippet.vim'
+NeoBundle 'Shougo/neosnippet-snippets'
+
 
 " plugins for programming (language-independent)
 NeoBundle 'majutsushi/tagbar'
