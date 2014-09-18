@@ -38,6 +38,8 @@ let maplocalleader = "\\"
 
 " make
 nnoremap <silent> <Leader>mm :Silent make!<CR>
+nnoremap <silent> <Leader>mc :Silent make! clean<CR>
+nnoremap <silent> <Leader>mC :Silent make! veryclean<CR>
 
 " toggle search highlight
 nnoremap <silent> <Leader>sh :set hlsearch!<CR>
