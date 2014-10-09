@@ -19,12 +19,14 @@ if(s:neobundle_present)
     let g:neobundle#types#git#default_protocol = 'https'
 
     if has('vim_starting') | set rtp+=$VIM_BUNDLES/neobundle.vim/ | endif
-    call neobundle#rc(expand('$VIM_BUNDLES/'))
+    call neobundle#begin(expand('$VIM_BUNDLES/'))
 
     for f in glob(expand("$VIM_CFG_REC") . '/plugin-lists/*.vim', 1, 1)   | exe 'source' f | endfor
     for f in glob(expand("$VIM_CFG_EXT") . '/*/plugin-lists/*.vim', 1, 1) | exe 'source' f | endfor
 
+    call neobundle#end()
     filetype plugin indent on
+    NeoBundleCheck
 
     if !has('vim_starting') | call neobundle#call_hook('on_source') | endif
 
