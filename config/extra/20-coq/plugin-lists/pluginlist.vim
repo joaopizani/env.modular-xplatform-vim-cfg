@@ -1,2 +1,2 @@
 NeoBundle 'def-lkb/vimbufsync'
-NeoBundle 'trefis/coquille'
+NeoBundle 'trefis/coquille', 'pathogen-bundle'
