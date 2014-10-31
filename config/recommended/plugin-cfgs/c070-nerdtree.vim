@@ -1,5 +1,5 @@
 " NERDTree
-let NERDTreeChDirMode = 2
+let NERDTreeChDirMode = 1
 let NERDChristmasTree = 1
 let NERDTreeShowBookmarks = 1
 let NERDTreeWinSize = 26
@@ -7,7 +7,7 @@ let NERDTreeBookmarksFile = expand("$VIM_RUNTIME") . '/NERDTreeBookmarks'
 
 function! s:doNERDTreeFocusOrCloseIfInside()
     if bufname("%") =~ "NERD_tree"
-        NERDTreeClose 
+        NERDTreeClose
     else
         NERDTreeFocus
     endif
