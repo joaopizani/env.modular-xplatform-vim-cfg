@@ -19,6 +19,7 @@ NeoBundle 'mbbill/undotree'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'szw/vim-maximizer'
+NeoBundle 'Pyrohh/vim-togglelist'
 NeoBundle 'jpalardy/vim-slime'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'junegunn/vim-easy-align'
@@ -31,7 +32,6 @@ NeoBundle 'Shougo/neosnippet-snippets'
 
 
 " plugins for programming (language-independent)
-NeoBundle 'majutsushi/tagbar'
 NeoBundle 'xolox/vim-misc'
 NeoBundle 'scrooloose/syntastic'
 

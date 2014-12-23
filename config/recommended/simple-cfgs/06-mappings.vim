@@ -1,6 +1,3 @@
-nnoremap <silent> <F6> :ToggleQuickfix<CR>
-inoremap <silent> <F6> <C-o>:ToggleQuickfix<CR>
-
 nnoremap <silent> <F7> :cn<CR>
 inoremap <silent> <F7> <C-o>:cn<CR>
 
