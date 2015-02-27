@@ -1,6 +1,6 @@
 if has("gui_running")
     set lines=45
-    set columns=140
+    set columns=146
     set guioptions-=T  " remove toolbar
     set guioptions-=r  " remove right-hand scroll bar
     set guioptions-=m  " remove menu bar
