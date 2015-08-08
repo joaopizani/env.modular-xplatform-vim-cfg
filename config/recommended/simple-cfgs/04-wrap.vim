@@ -1,4 +1,4 @@
-set colorcolumn=101  " column tolerance at 100
+set colorcolumn=110
 set textwidth=0
 set formatoptions=""
 set wrap linebreak nolist
