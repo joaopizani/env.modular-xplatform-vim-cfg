@@ -9,8 +9,6 @@ NeoBundle 'Shougo/vimproc', {
 \    },
 \}
 
-" colorschemes
-NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'jnurmine/Zenburn'
 
 " general-purpose plugins
